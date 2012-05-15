@@ -1,7 +1,17 @@
-Launch Deployment
------------------
+..
+    Launch Deployment
+    -----------------
 
-The deployment is now configured for launch. Click launch.
+デプロイメントの起動
+---------------------
+
+..
+    The deployment is now configured for launch. Click launch.
+
+デプロイメントを起動する準備が整いました。起動をクリックしてください。
+
+..
+   Launch Deployment
 
 .. figure:: ./images/startDeployment.png
    :height: 1000px
@@ -10,5 +20,4 @@ The deployment is now configured for launch. Click launch.
    :alt: Launch Deployment
    :align: center
 
-   Launch Deployment
-
+   デプロイメントの起動
