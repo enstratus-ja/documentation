@@ -1,13 +1,30 @@
-Ports
------
+..
+    Ports
+    -----
 
-The ports option in the actions menu for services allows the application designer to
-specify ports information that will be passed to the service at run time.
+ポート番号
+----------
 
-MySQL Ports
-~~~~~~~~~~~
+..
+    The ports option in the actions menu for services allows the application designer to
+    specify ports information that will be passed to the service at run time.
 
-For the MySQL service, make the ports setting as shown:
+サービスのアクションメニューのポートオプションは、実行時にサービスと情報をやり取りする特定のポート番号をアプリケーションデザイナーで設定します。
+
+..
+    MySQL Ports
+    ~~~~~~~~~~~
+
+MySQL ポート
+~~~~~~~~~~~~
+
+..
+    For the MySQL service, make the ports setting as shown:
+
+MySQL サービスには、次のようなポート設定を行います:
+
+..
+   Service, Ports
 
 .. figure:: ./images/ports0.png
    :height: 500px
@@ -16,6 +33,9 @@ For the MySQL service, make the ports setting as shown:
    :alt: Service, Ports
    :align: center
 
+   サービス、ポート番号
+
+..
    Service, Ports
 
 .. figure:: ./images/ports1.png
@@ -25,6 +45,9 @@ For the MySQL service, make the ports setting as shown:
    :alt: Service, Ports
    :align: center
 
+   サービス、ポート番号
+
+..
    Service, Ports
 
 .. figure:: ./images/ports2.png
@@ -34,6 +57,9 @@ For the MySQL service, make the ports setting as shown:
    :alt: Service, Ports
    :align: center
 
+   サービス、ポート番号
+
+..
    Service, Ports
 
 .. figure:: ./images/ports3.png
@@ -43,12 +69,22 @@ For the MySQL service, make the ports setting as shown:
    :alt: Service, Ports
    :align: center
 
+   サービス、ポート番号
+
+..
+    Wordpress Ports
+    ~~~~~~~~~~~~~~~
+
+Wordpress ポート
+~~~~~~~~~~~~~~~~
+
+..
+    For the wordpress service, make ports setting as shown:
+
+Wordpress サービスには、次のようなポート設定を行います:
+
+..
    Service, Ports
-
-Wordpress Ports
-~~~~~~~~~~~~~~~
-
-For the wordpress service, make ports setting as shown:
 
 .. figure:: ./images/ports4.png
    :height: 500px
@@ -57,6 +93,9 @@ For the wordpress service, make ports setting as shown:
    :alt: Service, Ports
    :align: center
 
+   サービス、ポート番号
+
+..
    Service, Ports
 
 .. figure:: ./images/ports5.png
@@ -66,6 +105,9 @@ For the wordpress service, make ports setting as shown:
    :alt: Service, Ports
    :align: center
 
+   サービス、ポート番号
+
+..
    Service, Ports
 
 .. figure:: ./images/ports6.png
@@ -75,6 +117,9 @@ For the wordpress service, make ports setting as shown:
    :alt: Service, Ports
    :align: center
 
+   サービス、ポート番号
+
+..
    Service, Ports
 
 .. figure:: ./images/ports7.png
@@ -84,4 +129,4 @@ For the wordpress service, make ports setting as shown:
    :alt: Service, Ports
    :align: center
 
-   Service, Ports
+   サービス、ポート番号
