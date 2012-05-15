@@ -1,9 +1,19 @@
-Upload Services
----------------
+..
+    Upload Services
+    ---------------
 
-Using Automation > Service Images, upload wordpress.tar.gz and mysql.tar.gz as service
-image files. enStratus stores these files in cloud files storage and will initiate a
-download of these files at launch time by the enStratus agent.
+サービスのアップロード
+----------------------
+
+..
+    Using Automation > Service Images, upload wordpress.tar.gz and mysql.tar.gz as service
+    image files. enStratus stores these files in cloud files storage and will initiate a
+    download of these files at launch time by the enStratus agent.
+
+"Automation > Service Images" からサービスイメージファイルとして wordpress.tar.gz と mysql.tar.gz をアップロードします。enStratus は、クラウドのファイルストレージにこれらのファイルを保存し、enStratus エージェントが起動時にこれらのファイルのダウンロードを開始します。
+
+..
+   Service Upload, Wordpress
 
 .. figure:: ./images/serviceUpload0.png
    :height: 300px
@@ -12,9 +22,15 @@ download of these files at launch time by the enStratus agent.
    :alt: Service Upload, Wordpress
    :align: center
 
-   Service Upload, Wordpress
+   サービスのアップロード、Wordpress
 
-Repeat this action for the mysql service.
+..
+    Repeat this action for the mysql service.
+
+mysql サービスのためにこの操作を繰り返し行います。
+
+..
+   Service Upload, MySQL
 
 .. figure:: ./images/serviceUpload1.png
    :height: 300px
@@ -23,9 +39,15 @@ Repeat this action for the mysql service.
    :alt: Service Upload, MySQL
    :align: center
 
-   Service Upload, MySQL
+   サービスのアップロード、MySQL
 
-Once this action is complete, there will be (minimally) 2 services.
+..
+    Once this action is complete, there will be (minimally) 2 services.
+
+この操作が完了したら、(最小) 2つのサービスがあります。
+
+..
+   Services Uploaded
 
 .. figure:: ./images/serviceUpload2.png
    :height: 500px
@@ -34,4 +56,4 @@ Once this action is complete, there will be (minimally) 2 services.
    :alt: Services Uploaded
    :align: center
 
-   Services Uploaded
+   サービスのアップロード完了
