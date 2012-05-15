@@ -1,4 +1,8 @@
-Wordpress Demo
+..
+    Wordpress Demo
+    ==============
+
+Wordpress デモ
 ==============
 
 .. toctree::
@@ -19,9 +23,11 @@ Wordpress Demo
    configure_datasource
    dependencies
    launch_configuration
-   prerequisites
    scaling_rules
    launch
+
+..
+   Wordpress Landing Page
 
 .. figure:: ./images/demoLanding.png
    :height: 600px
@@ -30,4 +36,4 @@ Wordpress Demo
    :alt: Wordpress Landing Page
    :align: center
 
-   Wordpress Landing Page
+   Wordpress ランディングページ
