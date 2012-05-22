@@ -2,7 +2,7 @@
     Configure Launch Configuration
     ------------------------------
 
-起動設定の構成
+起動構成の構成
 --------------
 
 ..
@@ -10,7 +10,7 @@
     By now, the imaged we prepared earlier should be ready for use in the launch
     configuration.
 
-この次に行う最後の作業は、デプロイメントを使うために仮想リソースを設定することです。そろそろ起動設定で使うために最初に用意したイメージの利用を準備します。
+この次に行う最後の作業は、デプロイメントを使うために仮想リソースを設定することです。そろそろ起動構成で使うために最初に用意したイメージの利用を準備します。
 
 ..
     In these steps, we'll tell enStratus what Image to use when starting servers, along with
@@ -24,18 +24,18 @@
        In practice, this would probably not be the case, as a dedicate image would be used to
        support the application, and likewise the database.
 
-  このチュートリアルでは、両方の起動設定に同じイメージを使っています。実際には、そのアプリケーションやデータベースに対応したそれぞれの専用イメージとなり、このようにはならないでしょう。
+  このチュートリアルでは、両方の起動構成に同じイメージを使っています。実際には、そのアプリケーションやデータベースに対応したそれぞれの専用イメージとなり、このようにはならないでしょう。
 
 ..
     Set an image for use in each of the launch configurations, as shown:
 
-次のように起動設定に使うイメージを設定してください:
+次のように起動構成に使うイメージを設定してください:
 
 ..
     Wordpress Launch Configuration
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Wordpress の起動設定
+Wordpress の起動構成
 ~~~~~~~~~~~~~~~~~~~~
 
 ..
@@ -48,13 +48,13 @@ Wordpress の起動設定
    :alt: Launch Configuration, Wordpress
    :align: center
 
-   起動設定、Wordpress
+   起動構成、Wordpress
 
 ..
     Once the initial launch configurations are set, click on the launch configuration, scroll
     to the bottom, and use the previously created firewall.
 
-初期起動設定を行ったら、起動設定をクリックし、下の方へスクロールして、これまでに作成したファイアウォールを使います。
+初期起動構成を行ったら、起動構成をクリックし、下の方へスクロールして、これまでに作成したファイアウォールを使います。
 
 ..
    Launch Configuration, Edit Wordpress
@@ -66,13 +66,13 @@ Wordpress の起動設定
    :alt: Launch Configuration, Wordpress
    :align: center
 
-   起動設定、Wordpress の編集
+   起動構成、Wordpress の編集
 
 ..
     MySQL Launch Configuration
     ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-MySQL 起動設定
+MySQL 起動構成
 ~~~~~~~~~~~~~~
 
 ..
@@ -85,13 +85,13 @@ MySQL 起動設定
    :alt: Launch Configuration, MySQL
    :align: center
 
-   起動設定、MySQL
+   起動構成、MySQL
 
 ..
     Once the initial launch configurations are set, click on the launch configuration, scroll
     to the bottom, and use the previously created firewall.
 
-初期起動設定を行ったら、起動設定をクリックし、下の方へスクロールして、これまでに作成したファイアウォールを使います。
+初期起動構成を行ったら、起動構成をクリックし、下の方へスクロールして、これまでに作成したファイアウォールを使います。
 
 ..
    Launch Configuration, Edit MySQL
@@ -103,4 +103,4 @@ MySQL 起動設定
    :alt: Launch Configuration, MySQL
    :align: center
 
-   起動設定、MySQL の編集
+   起動構成、MySQL の編集
