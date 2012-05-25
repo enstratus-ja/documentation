@@ -1,22 +1,39 @@
+..
+    Agent Downloads (Version 16)
+    ============================
+
 .. _agent_downloads:
 
-Agent Downloads (Version 16)
-============================
+エージェントのダウンロード (バージョン16)
+=========================================
 
 Ubuntu x32/x64
 ~~~~~~~~~~~~~~
 
 Tarball
 ^^^^^^^
+
 `Ubuntu x32/x64 <http://es-download.s3.amazonaws.com/enstratus-agent-ubuntu-latest.tar.gz>`_ 141a5c1d60347bf5f897c70ceee2101a Thu Apr 19 12:08:46 CDT 2012
 
-Chef Cookbook
-^^^^^^^^^^^^^
-To install the agent using chef-solo, you will first need to install chef. Here's how to
-do that:
+..
+    Chef Cookbook
+    ^^^^^^^^^^^^^
 
-.. warning:: The chef-cookbook is only set to run with the EC2 cloud in the enStratus
-  production (SaaS) environment. More clouds will be added ASAP.
+Chef クックブック
+^^^^^^^^^^^^^^^^^
+
+..
+    To install the agent using chef-solo, you will first need to install chef. Here's how to
+    do that:
+
+chef-solo を使うエージェントをインストールするには、先に chef をインストールする必要があります。ここではインストール方法を説明します:
+
+.. warning::
+   ..
+       The chef-cookbook is only set to run with the EC2 cloud in the enStratus
+       production (SaaS) environment. More clouds will be added ASAP.
+
+   chef-cookbook は、enStratus (SaaS) 環境の EC2 クラウドでのみ実行できます。他のクラウドもすぐに追加されるでしょう。
 
 .. code-block:: bash
 
@@ -31,7 +48,10 @@ do that:
 .deb Package
 ^^^^^^^^^^^^
 
-Coming soon...
+..
+    Coming soon...
+
+まもなく。
 
 CentOS/RedHat x32/x64
 ~~~~~~~~~~~~~~~~~~~~~
