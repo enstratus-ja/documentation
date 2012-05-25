@@ -1,6 +1,10 @@
+..
+    Installation
+    ------------
+
 .. _agent_installation:
 
-Installation
+インストール
 ------------
 
 .. toctree::
