@@ -1,3 +1,11 @@
-Extending the Agent
--------------------
-Coming Soon...
+..
+    Extending the Agent
+    -------------------
+
+エージェントの拡張
+------------------
+
+..
+    Coming Soon...
+
+まもなく。
