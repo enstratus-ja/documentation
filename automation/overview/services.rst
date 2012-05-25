@@ -1,10 +1,23 @@
-Add Services
-------------
+..
+    Add Services
+    ------------
 
-Services are connected to a deployment at the tier level. Put simply, a service is a
-file that is downloaded from cloudfiles storage to every server running in the tier.
+サービスの追加
+--------------
 
-Examples of services include MySQL, Postgres, Wordpress, Drupal, Tomcat, etc.
+..
+    Services are connected to a deployment at the tier level. Put simply, a service is a
+    file that is downloaded from cloudfiles storage to every server running in the tier.
+
+サービスは、階層レベルでデプロイメントに接続されます。簡単に言えば、サービスはクラウドファイルストレージから、その階層上で実行中の全てのサーバーにダウンロードされるファイルです。
+
+..
+    Examples of services include MySQL, Postgres, Wordpress, Drupal, Tomcat, etc.
+
+サービスの例としては、MySQL、Postgres、Wordpress、Drupal、Tomcat などです。
+
+..
+   Services Added to Tiers
 
 .. figure:: ./images/deployment4.png
    :height: 600px
@@ -13,4 +26,4 @@ Examples of services include MySQL, Postgres, Wordpress, Drupal, Tomcat, etc.
    :alt: Services Added to Tiers
    :align: center
 
-   Services Added to Tiers
+   階層にサービスを追加
