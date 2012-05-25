@@ -1,0 +1,28 @@
+{% extends "!layout.html" %}
+{% block sidebartoc %}
+    {{ super() }}
+    <h3>{{ _('Agent Contents') }}</h3>
+    {{ toctree() }}
+    <h3 style="margin-top: 1.5em;">{{ _('Downloads') }}</h3>
+      <div class="links"><a href="http://es-content.s3.amazonaws.com/enstratus-api-latest.pdf">API Document (PDF)</a></div>
+      <div class="links"><a href="http://es-content.s3.amazonaws.com/Master Security WP.pdf">Security Whitepaper</a></div>
+      <div class="links"><a href="http://es-content.s3.amazonaws.com/Master Identity & Access Controls WP.pdf">Identify & Access Controls</a></div>
+      <div class="links"><a href="http://es-content.s3.amazonaws.com/Master Enterprise Cloud Mgmt WP.pdf">Understanding Cloud Management</a></div>
+    {%- endblock %}
+
+{% block footer %}
+  {{ super() }}
+  <script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-30412256-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+  </script>
+{% endblock %}
