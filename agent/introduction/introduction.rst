@@ -1,4 +1,8 @@
-Introduction
-============
+..
+    Introduction
+    ============
 
-Coming soon...
+はじめに
+========
+
+まもなく。
