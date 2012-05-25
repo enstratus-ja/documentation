@@ -1,5 +1,9 @@
-Introduction
-============
+..
+    Introduction
+    ============
+
+はじめに
+========
 
 .. toctree::
    :maxdepth: 1
