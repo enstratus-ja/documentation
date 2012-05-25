@@ -1,7 +1,10 @@
 Windows
 -------
 
-The enStratus agent has been tested to work on the following windows platforms:
+..
+    The enStratus agent has been tested to work on the following windows platforms:
+
+enStratus エージェントは、次の Windows プラットフォームで動作することをテストしています:
 
 #. Windows 2003 x32
 #. Windows 2008 x32
