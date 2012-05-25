@@ -1,4 +1,8 @@
-Deployment Operation
+..
+    Deployment Operation
+    ====================
+
+デプロイメントの操作
 ====================
 
 .. toctree::
