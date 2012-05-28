@@ -1,56 +1,113 @@
 checkService
 ~~~~~~~~~~~~
 
-Name
-+++++
-checkService - This script is used to determine the "health" of a service
+..
+    Name
+    +++++
 
-Synopsis
-++++++++
+名称
+++++
+
+..
+    checkService - This script is used to determine the "health" of a service
+
+checkService - このスクリプトはサービスが健全な状態かを調べるために使われます
+
+..
+    Synopsis
+    ++++++++
+
+構文
+++++
 
 checkService SERVICE_ID
 
-Description
-+++++++++++
-This script is used to determine the "health" of a service. It is meant to be user-extensible. The way to use this script is to write a script called
-enstratus-check and put it in the /bin directory of your service image.
-The enStratus provisioning server will call this script during the launch of the service. If the script returns a code of "OK", the service will be
-marked as running. If not, it will be marked as impaired.
+..
+    Description
+    +++++++++++
 
+説明
+++++
 
-Options
-+++++++
+..
+    This script is used to determine the "health" of a service. It is meant to be user-extensible. The way to use this script is to write a script called
+    enstratus-check and put it in the /bin directory of your service image.
+    The enStratus provisioning server will call this script during the launch of the service. If the script returns a code of "OK", the service will be
+    marked as running. If not, it will be marked as impaired.
+
+このスクリプトはサービスが健全な状態かを調べるために使われます。このスクリプトはユーザーが拡張できます。このスクリプトを利用するには、enstratus-check というファイル名のスクリプトを作成して、サービスイメージの /bin ディレクトリにそのスクリプトを置きます。enStratus のプロビジョニングサーバーは、サービスの起動中にこのスクリプトを呼び出します。このスクリプトが "OK" のコードを返す場合、このサービスは実行中と表示されます。そうでない場合は、障害として表示されます。
+
+..
+    Options
+    +++++++
+
+オプション
+++++++++++
 
 SERVICE_ID
-	ID of the service to be checked. It's provided by enstratus. Service images are stored in /mnt/services/$SERVICE_ID
+    ..
+        ID of the service to be checked. It's provided by enstratus. Service images are stored in /mnt/services/$SERVICE_ID
 
+    チェックするサービスの ID で、enStratus が提供します。サービスイメージは /mnt/services/$SERVICE_ID に保存されます。
 
-Examples
-++++++++
+..
+    Examples
+    ++++++++
+
+例
+++
 
 checkService a123
 
+..
+    Invocation
+    ++++++++++
 
-Invocation
-++++++++++
+起動
+++++
 
-This script is called automatically by enstratus during the launch of the service
+..
+    This script is called automatically by enstratus during the launch of the service
 
+このスクリプトは、サービスの起動中に enStratus が自動的に実行します。
 
-Dependencies
-++++++++++++
+..
+    Dependencies
+    ++++++++++++
 
-* None
+依存関係
+++++++++
 
-Permission
-++++++++++
+..
+    * None
 
-It is launched by the enstratus user.
+* なし
 
+..
+    Permission
+    ++++++++++
 
-Overrides
-+++++++++
+権限
+++++
 
-Override: No
+..
+    It is launched by the enstratus user.
 
-Replace: Yes
+enstratus ユーザーが実行します。
+
+..
+    Overrides
+    +++++++++
+
+オーバーライド
+++++++++++++++
+
+..
+    Override: No
+
+オーバーライド: 不可
+
+..
+    Replace: Yes
+
+置き換え: 可
