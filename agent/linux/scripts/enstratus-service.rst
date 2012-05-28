@@ -1,30 +1,61 @@
 enstratus-service
 ~~~~~~~~~~~~~~~~~
 
-Name
+..
+    Name
+    ++++
+
+名称
 ++++
 
-enstratus-service ~ Manages the enStratus agent daemon
+..
+    enstratus-service - Manages the enStratus agent daemon
 
-Synopsis
-++++++++
+enstratus-service - enStratus エージェントデーモンを管理する
+
+..
+    Synopsis
+    ++++++++
+
+構文
+++++
 
 enstratus-service ACTION
 
-Description
-+++++++++++
+..
+    Description
+    +++++++++++
 
-It starts or stops the enStratus agent.
+説明
+++++
 
-Options
-+++++++
+..
+    It starts or stops the enStratus agent.
+
+enStratus エージェントを開始したり停止したりします。
+
+..
+    Options
+    +++++++
+
+オプション
+++++++++++
 
 ACTION
-	start for starting the enStratus agent
-	stop for stopping the enStratus agent
-	
-Examples
-++++++++
+    ..
+        start for starting the enStratus agent
+        stop for stopping the enStratus agent
+
+    start は enStratus エージェントを開始する
+
+    stop は enStratus エージェントを停止する
+
+..
+    Examples
+    ++++++++
+
+例
+++
 
 .. code-block:: sh
 
@@ -39,27 +70,55 @@ Examples
 	Using CATALINA_TMPDIR: /enstratus/ws/tomcat/temp
 	Using JRE_HOME:       /usr/java/jdk
 
+..
+    Invocation
+    ++++++++++
 
-Invocation
-++++++++++
+起動
+++++
 
-This script is called by /etc/init.d/tomcat-enstratus on server boot to start the enStratus agent. It can also be run manually to start/stop the agent.
+..
+    This script is called by /etc/init.d/tomcat-enstratus on server boot to start the enStratus agent. It can also be run manually to start/stop the agent.
 
+このスクリプトは /etc/init.d/tomcat-enstratus により enStratus エージェントを開始するためにサーバー起動時に実行します。enStratus エージェントを手動で開始/停止するのにも使えます。
 
-Dependencies
-++++++++++++
+..
+    Dependencies
+    ++++++++++++
 
-* enStratus agent requires JDK
+依存関係
+++++++++
 
-Permission
-++++++++++
+..
+    * enStratus agent requires JDK
 
-It is launched by the enStratus user.
+* enStratus エージェントは JDK を必要とします
 
+..
+    Permission
+    ++++++++++
 
-Overrides
-+++++++++
+権限
+++++
 
-Override: No
+..
+    It is launched by the enStratus user.
 
-Replace: No
+enstratus ユーザーが実行します。
+
+..
+    Overrides
+    +++++++++
+
+オーバーライド
+++++++++++++++
+
+..
+    Override: No
+
+オーバーライド: 不可
+
+..
+    Replace: No
+
+置き換え: 不可
