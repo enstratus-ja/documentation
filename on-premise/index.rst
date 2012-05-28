@@ -4,11 +4,18 @@
    contain the root `toctree` directive.
 
 
-enStratus on-Premise
-====================
+..
+    enStratus on-Premise
+    ====================
 
-Welcome to the enStratus on-premise documentation portal. Use the menu at left to learn
-more about managing an enStratus on-premise installation.
+enStratus オンプレミス
+======================
+
+..
+    Welcome to the enStratus on-premise documentation portal. Use the menu at left to learn
+    more about managing an enStratus on-premise installation.
+
+enStratus オンプレミスのドキュメントポータルへようこそ。メニューから選択して EnStratus オンプレミスのインストールについて学びます。
 
 .. figure:: ./images/onPremise.png
    :height: 350px
