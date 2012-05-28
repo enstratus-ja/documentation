@@ -1,17 +1,36 @@
 listDevices
 ~~~~~~~~~~~
 
-Synopsis
-++++++++
+..
+    Synopsis
+    ++++++++
 
-listDevices - List all devices currently mounted for the machine
+構文
+++++
 
-Description
-+++++++++++
-Print a list of mounted partitions, file system, total and used capacity.
+..
+    listDevices - List all devices currently mounted for the machine
 
-Examples
-++++++++
+listDevices - マシンに現在マウントされている全てのデバイスを一覧表示する
+
+..
+    Description
+    +++++++++++
+
+説明
+++++
+
+..
+    Print a list of mounted partitions, file system, total and used capacity.
+
+マウントされたパーティション、ファイルシステム、合計と使用容量の一覧を表示します。
+
+..
+    Examples
+    ++++++++
+
+例
+++
 
 .. code-block:: sh
 
@@ -20,29 +39,48 @@ Examples
 	/dev/sdb ext3 /mnt 433455904 22485176
 	/dev/sdh xfs /mnt/services 34578536 13631816
 
+..
+    Invocation
+    ++++++++++
 
+..
+    It is called by the enstratus provisioning server to display information about the server volumes
 
-Invocation
-++++++++++
+サーバーのボリューム情報を表示するために enStratus のプロビジョニングされたサーバーが実行します。
 
-It is called by the enstratus provisioning server to display information about the server volumes
+依存関係
+++++++++
 
+..
+    * None
 
-Dependencies
-++++++++++++
+* なし
 
-* None
+..
+    Permission
+    ++++++++++
 
+権限
+++++
 
-Permissions
-+++++++++++
+..
+    It is launched by the enstratus user.
 
-It is launched by the enstratus user.
+enstratus ユーザーが実行します。
 
+..
+    Overrides
+    +++++++++
 
-Overrides
-+++++++++
+オーバーライド
+++++++++++++++
 
-Override: No
+..
+    Override: No
 
-Replace: No
+オーバーライド: 不可
+
+..
+    Replace: No
+
+置き換え: 不可
