@@ -1,51 +1,103 @@
 umount
 ~~~~~~
 
-Name
+..
+    Name
+    ++++
+
+名称
 ++++
 
-umount - It umounts any filesystem mounted at a given folder 
+..
+    umount - It umounts any filesystem mounted at a given folder 
 
+umount - 所定のフォルダーにマウントされたファイルシステムをアンマウントする
 
-Synopsis
-++++++++
+..
+    Synopsis
+    ++++++++
+
+構文
+++++
 
 umount MOUNT_POINT
 
-Description
-+++++++++++
+..
+    Description
+    +++++++++++
 
-It umount any filesystem mounted at MOUNT_POINT . Aditionally it removes any related entry in /etc/fstab.
+説明
+++++
 
-Options
-+++++++
+..
+    It umount any filesystem mounted at MOUNT_POINT . Aditionally it removes any related entry in /etc/fstab.
 
-MOUNT_POINT
-	Directory to be unmounted
+MOUNT_POINT の任意のファイルシステムをアンマウントします。さらに /etc/fstab の関連するエントリーを削除します。
 
+..
+    Options
+    +++++++
 
-Invocation
+オプション
 ++++++++++
 
-This script is called when:
+MOUNT_POINT
+    ..
+        Directory to be unmounted
 
-* A Volume is dettached from server in the Volume list page.
+    アンマウントするディレクトリ
 
-Dependencies
-++++++++++++
+..
+    Invocation
+    ++++++++++
+
+起動
+++++
+
+..
+    This script is called when:
+
+このスクリプトは次のときに実行されます:
+
+..
+    * A Volume is dettached from server in the Volume list page.
+
+* "Volume" 一覧ページでサーバーからボリュームが取り外すとき
+
+..
+    Dependencies
+    ++++++++++++
+
+依存関係
+++++++++
 
 * sudo
 
+..
+    Permissions
+    +++++++++++
 
-Permissions
-+++++++++++
+権限
+++++
 
-It is launched by the enstratus user. It needs sudo authority for umounting a device. 
+..
+    It is launched by the enstratus user. It needs sudo authority for umounting a device. 
 
+enstratus ユーザーが実行します。デバイスをアンマウントするために sudo 権限が必要です。
 
-Overrides
-+++++++++
+..
+    Overrides
+    +++++++++
 
-Override: Yes, pre and post
+オーバーライド
+++++++++++++++
 
-Replace: Yes
+..
+    Override: Yes, pre and post
+
+オーバーライド: 可、事前と事後
+
+..
+    Replace: Yes
+
+置き換え: 可
