@@ -1,7 +1,11 @@
 .. _introduction:
 
-Introduction
-============
+..
+    Introduction
+    ============
+
+はじめに
+========
 
 .. toctree::
    :maxdepth: 1
@@ -11,4 +15,7 @@ Introduction
    network
    procedure
 
-Welcome and thank you for considering enStratus as your cloud management platform. 
+..
+    Welcome and thank you for considering enStratus as your cloud management platform. 
+
+ようこそ！クラウド管理プラットフォームとして enStratus を検討して頂いてありがとうございます。
