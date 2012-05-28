@@ -1,48 +1,109 @@
 lockFileSystems
 ~~~~~~~~~~~~~~~
 
-Name
-++++
-lockFileSystems -  Locks all mounted XFS partitions
+..
+    Name
+    ++++
 
-Synopsis
-++++++++
+名称
+++++
+
+..
+    lockFileSystems -  Locks all mounted XFS partitions
+
+lockFileSystems - マウントされた全ての XFS パーティションをロックする
+
+..
+    Synopsis
+    ++++++++
+
+構文
+++++
+
 lockFileSystems
 
-Description
-+++++++++++
-It prevents access to all mounted XFS partitions using the xfs_freeze tool as a required step for creating volume snapshots.
+..
+    Description
+    +++++++++++
 
-Options
-++++++++
+説明
+++++
 
-None
+..
+    It prevents access to all mounted XFS partitions using the xfs_freeze tool as a required step for creating volume snapshots.
 
-Examples
-++++++++
+ボリュームのスナップショットを作成するために必要な手順として、xfs_freeze ツールにより、マウントされた全 XFS パーティションにアクセスできなくなります。
+
+..
+    Options
+    ++++++++
+
+オプション
+++++++++++
+
+..
+    None
+
+なし
+
+..
+    Examples
+    ++++++++
+
+例
+++
+
 .. code-block:: sh
 
 	$ lockFileSystems 
 	
+..
+    Invocation
+    ++++++++++
 
-Invocation
-++++++++++
+起動
+++++
 
-It is called by volume snapshot scripts
+..
+    It is called by volume snapshot scripts
 
-Dependencies
-++++++++++++
+ボリュームのスナップショットスクリプトが実行します。
+
+..
+    Dependencies
+    ++++++++++++
+
+依存関係
+++++++++
+
 * sudo
 * xfs_freeze
 
-Permission
-++++++++++
+..
+    Permission
+    ++++++++++
 
-Run by the enstratus user. It needs sudo to run the xfs_freeze command
+権限
+++++
 
-Overrides
-+++++++++
+..
+    Run by the enstratus user. It needs sudo to run the xfs_freeze command
 
-Override: No
+enstratus ユーザーが実行します。xfs_freeze コマンドを実行するために sudo 権限が必要です。
 
-Replace: No
+..
+    Overrides
+    +++++++++
+
+オーバーライド
+++++++++++++++
+
+..
+    Override: No
+
+オーバーライド: 不可
+
+..
+    Replace: No
+
+置き換え: 不可
