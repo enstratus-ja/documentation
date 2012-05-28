@@ -381,14 +381,8 @@ MS C ランタイムライブラリをダウンロードします:
    ..
        Double-click jdk-7-windows-x64.exe, accepting all defaults during installation.
        Set the JAVA_HOME environment variable, by entering the following into
-..
-    
-       jdk-7-windows-x64.exe をダブルクリックして、全てデフォルト値でインストールします。JAVA_HOME 環境変数を次のように設定します
 
-
-   jdk-7-windows-x64.exe をダブルクリックして、全てデフォルト値でインストールします。
-   JAVA_HOME 環境変数を次のように設定します
-
+   jdk-7-windows-x64.exe をダブルクリックして、全てデフォルト値でインストールします。JAVA_HOME 環境変数を次のように設定します
 
 .. code-block:: powershell
 
