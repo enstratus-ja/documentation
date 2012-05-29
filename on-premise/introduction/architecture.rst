@@ -1,5 +1,12 @@
-Architecture Requirements
--------------------------
+..
+    Architecture Requirements
+    -------------------------
+
+アーキテクチャ要件
+------------------
+
+..
+   4-server Architecture
 
 .. figure:: images/enstratusArchitecture.png
    :height: 550px
@@ -8,67 +15,123 @@ Architecture Requirements
    :alt: 4-server Architecture
    :align: center
 
-   4-server Architecture
+   4 サーバーアーキテクチャ
 
-#. Communications from the Monitor/Workers processes to the guest VM agent on port 2003
-   for the purpose of collecting logs.
-#. Bi-directional communications between the dispatcher service and the guest VM agent.
+..
+    #. Communications from the Monitor/Workers processes to the guest VM agent on port 2003
+       for the purpose of collecting logs.
+    #. Bi-directional communications between the dispatcher service and the guest VM agent.
 
-   * Initiated by the guest VM enStratus agent during handshake to the dispatcher service
-     on port 3302
+       * Initiated by the guest VM enStratus agent during handshake to the dispatcher service
+         on port 3302
 
-   * Initiated by the enStratus dispatcher service to the guest VM enStratus agent on port
-     2003
+       * Initiated by the enStratus dispatcher service to the guest VM enStratus agent on port
+         2003
 
-#. Communications from the enStratus dispatcher service to the cloud provider API
-   endpoint.
-#. Communications from the enStratus monitor and worker services to the cloud provider API
-   endpoint.
+    #. Communications from the enStratus dispatcher service to the cloud provider API
+       endpoint.
+    #. Communications from the enStratus monitor and worker services to the cloud provider API
+       endpoint.
 
-To install enStratus on 4-5 machines
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#. Monitor/Worker プロセスからゲスト VM エージェントの2003番ポートへの通信はログ収集目的です。
+#. ディスパッチャーサービスとゲスト VM エージェント間は双方向通信です。
 
-.. tabularcolumns:: |l|l|l|l|l|
+   * ゲスト VM enStratus エージェントは、ディスパッチャーサービスとのハンドシェイクに3302番ポートを使います
+   * enStratus ディスパッチャーサービスは、ゲスト VM enStratus エージェントとの通信に2003番ポートを使います
 
-+----------------+---------------+-------------+--------------+----------------------------------+
-| Component      | Compute Cores | Memory (Gb) | Storage (Gb) | Software                         |
-+================+===============+=============+==============+==================================+
-| Key Management | 1             | 1           | 10           | Sun Java JDKv6, MySQL            |
-+----------------+---------------+-------------+--------------+----------------------------------+
-| Dispatcher     | 2-4           | 4-6         | 20           | Sun Java JDKv6, MySQL, Rabbit MQ |
-+----------------+---------------+-------------+--------------+----------------------------------+
-| Monitor/Worker | 2-4           | 6-8         | 20           | Sun Java JDKv6, MySQL, JSVC      |
-+----------------+---------------+-------------+--------------+----------------------------------+
-| Console        | 1-2           | 2-4         | 20           | Sun Java JDKv6                   |
-+----------------+---------------+-------------+--------------+----------------------------------+
+#. enStratus ディスパッチャーサービスからクラウドプロバイダー API エンドポイントへの通信です。
+#. enStratus のモニター/ワーカーサービスからクラウドプロバイダー API エンドポイントへの通信です。
 
-To install enStratus on 2 machines
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+..
+    To install enStratus on 4-5 machines
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. tabularcolumns:: |l|l|l|l|l|
+4-5 台のマシンに enStratus をインストール
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-+----------------+---------------+-------------+--------------+----------------------------------------+
-| Component      | Compute Cores | Memory (Gb) | Storage (Gb) | Software                               |
-+================+===============+=============+==============+========================================+
-| Backend        | 4-6           | 6-12        | 30           | Sun Java JDKv6, MySQL, Rabbit MQ, JSVC |
-+----------------+---------------+-------------+--------------+----------------------------------------+
-| Console        | 4-6           | 6-12        | 30           | Sun Java JDKv6, MySQL                  |
-+----------------+---------------+-------------+--------------+----------------------------------------+
-
-.. Note:: In the case of the 2-server model, the KM, Dispatcher, Monitor, and Worker services will be installed on one machine. 
-
-To install enStratus on a single machine
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+..
+    +----------------+---------------+-------------+--------------+----------------------------------+
+    | Component      | Compute Cores | Memory (Gb) | Storage (Gb) | Software                         |
+    +================+===============+=============+==============+==================================+
+    | Key Management | 1             | 1           | 10           | Sun Java JDKv6, MySQL            |
+    +----------------+---------------+-------------+--------------+----------------------------------+
+    | Dispatcher     | 2-4           | 4-6         | 20           | Sun Java JDKv6, MySQL, RabbitMQ  |
+    +----------------+---------------+-------------+--------------+----------------------------------+
+    | Monitor/Worker | 2-4           | 6-8         | 20           | Sun Java JDKv6, MySQL, JSVC      |
+    +----------------+---------------+-------------+--------------+----------------------------------+
+    | Console        | 1-2           | 2-4         | 20           | Sun Java JDKv6                   |
+    +----------------+---------------+-------------+--------------+----------------------------------+
 
 .. tabularcolumns:: |l|l|l|l|l|
 
-+----------------+---------------+-------------+--------------+----------------------------------------+
-| Component      | Compute Cores | Memory (Gb) | Storage (Gb) | Software                               |
-+================+===============+=============+==============+========================================+
-| Everything     | 6-24          | 6-12        | 30           | Sun Java JDKv6, MySQL, Rabbit MQ, JSVC |
-+----------------+---------------+-------------+--------------+----------------------------------------+
++--------------------+--------+---------------+-----------------+----------------------------------+
+| コンポーネント     | コア数 | メモリー (Gb) | ストレージ (Gb) | ソフトウェア                     |
++====================+========+===============+=================+==================================+
+| 鍵管理             | 1      | 1             | 10              | Sun Java JDKv6, MySQL            |
++--------------------+--------+---------------+-----------------+----------------------------------+
+| ディスパッチャー   | 2-4    | 4-6           | 20              | Java JDKv6, MySQL, RabbitMQ      |
++--------------------+--------+---------------+-----------------+----------------------------------+
+| モニター/ワーカー  | 2-4    | 6-8           | 20              | Sun Java JDKv6, MySQL, JSVC      |
++--------------------+--------+---------------+-----------------+----------------------------------+
+| コンソール         | 1-2    | 2-4           | 20              | Sun Java JDKv6                   |
++--------------------+--------+---------------+-----------------+----------------------------------+
 
+..
+    To install enStratus on 2 machines
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. Warning:: Installing with the bare minimum requirements may result in a degradation of performance.
+2 台のマシーンに enStratus をインストール
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+..
+    +----------------+---------------+-------------+--------------+----------------------------------------+
+    | Component      | Compute Cores | Memory (Gb) | Storage (Gb) | Software                               |
+    +================+===============+=============+==============+========================================+
+    | Backend        | 4-6           | 6-12        | 30           | Sun Java JDKv6, MySQL, RabbitMQ , JSVC |
+    +----------------+---------------+-------------+--------------+----------------------------------------+
+    | Console        | 4-6           | 6-12        | 30           | Sun Java JDKv6, MySQL                  |
+    +----------------+---------------+-------------+--------------+----------------------------------------+
 
+.. tabularcolumns:: |l|l|l|l|l|
+
++----------------+--------+---------------+-----------------+---------------------------------------+
+| コンポーネント | コア数 | メモリー (Gb) | ストレージ (Gb) | ソフトウェア                          |
++================+========+===============+=================+=======================================+
+| バックエンド   | 4-6    | 6-12          | 30              | Java JDKv6, MySQL, RabbitMQ, JSVC     |
++----------------+--------+---------------+-----------------+---------------------------------------+
+| コンソール     | 4-6    | 6-12          | 30              | Java JDKv6, MySQL                     |
++----------------+--------+---------------+-----------------+---------------------------------------+
+
+.. Note::
+   ..
+       In the case of the 2-server model, the KM, Dispatcher, Monitor, and Worker services will be installed on one machine. 
+
+   2台のサーバーにインストールする場合は、鍵管理、ディスパッチャー、モニターとワーカーサービスは1台のマシンにインストールします。
+
+..
+    To install enStratus on a single machine
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+1 台のマシンに enStratus をインストール
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+..
+    +----------------+---------------+-------------+--------------+----------------------------------------+
+    | Component      | Compute Cores | Memory (Gb) | Storage (Gb) | Software                               |
+    +================+===============+=============+==============+========================================+
+    | Everything     | 6-24          | 6-12        | 30           | Sun Java JDKv6, MySQL, RabbitMQ, JSVC  |
+    +----------------+---------------+-------------+--------------+----------------------------------------+
+
+.. tabularcolumns:: |l|l|l|l|l|
+
++----------------+-------+---------------+-----------------+---------------------------------------+
+| コンポーネント | コア  | メモリー (Gb) | ストレージ (Gb) | ソフトウェア                          |
++================+=======+===============+=================+=======================================+
+| 全て           | 6-24  | 6-12          | 30              | Java JDKv6, MySQL, RabbitMQ, JSVC     |
++----------------+-------+---------------+-----------------+---------------------------------------+
+
+.. Warning::
+   ..
+       Installing with the bare minimum requirements may result in a degradation of performance.
+
+   最小要件でインストールすると、パフォーマンスの低下を招く可能性があります。
