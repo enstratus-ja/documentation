@@ -1,64 +1,137 @@
-Networking Requirements
------------------------
+..
+    Networking Requirements
+    -----------------------
 
-enStratus components must have direct communications with each other. To enable enStratus agent communication
-on the guest VM, please make the following considerations:
+ネットワーク要件
+----------------
 
-Dispatcher Service 
-~~~~~~~~~~~~~~~~~~
+..
+    enStratus components must have direct communications with each other. To enable enStratus agent communication
+    on the guest VM, please make the following considerations:
 
-The dispatcher service listens on port 3302. Provisioned (guest) virtual machines that have the agent
-installed upon them must be able to reach the dispatcher service on this port.
+enStratus コンポーネントは、互いに直接通信できる必要があります。ゲスト VM 上で enStratus エージェントの通信が行えるようにするには、次の内容を考慮してください:
 
-Agent
-~~~~~
+..
+    Dispatcher Service
+    ~~~~~~~~~~~~~~~~~~
 
-The enStratus agent listens on port 2003 and can be installed on guest virtual machines. The server(s) upon
-which the dispatcher and workers service runs must be able to communicate to the agent on this port.
-
-To summarize:
-
-* Communication from guest virtual machines to the dispatcher server on port 3302
-
-* Communication from the dispatcher service to the guest virtual machines on port 2003
-
-enStratus Communications
+ディスパッチャーサービス
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
-The purpose of this section is to clarify the communication channels required by the individual enStratus
-components. Ports listed are default and/or standard service ports and are subject to any customizations made
-by the installing engineers.
+..
+    The dispatcher service listens on port 3302. Provisioned (guest) virtual machines that have the agent
+    installed upon them must be able to reach the dispatcher service on this port.
 
-Example
-^^^^^^^
-Let's assume that the enStratus installation is using the 4-server model shown above. The worker and
-dispatcher servers and their associated services can be moved as necessary to a separate network provided the
-communication paths between remain. This principle holds for any of the enstratus components.
+ディスパッチャーサービスは、3302番ポートでリクエストを受け付けます。エージェントがインストール済みのプロビジョニングされた (ゲスト) 仮想マシンは、このポート番号を使ってディスパッチャーサービスと通信できる必要があります。
 
-enStratus has a very flexible architecture. If you are an administrator of the enStratus software, you should
-feel free to move components and architect the most appropriate solution for your cloud environment.
+..
+    Agent
+    ~~~~~
 
-enStratus Internal/External Communications
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+エージェント
+~~~~~~~~~~~~
+
+..
+    The enStratus agent listens on port 2003 and can be installed on guest virtual machines. The server(s) upon
+    which the dispatcher and workers service runs must be able to communicate to the agent on this port.
+
+enStratus エージェントは、2003番ポートでリクエストを受け付け、ゲスト仮想マシンにインストールできます。このサーバー上で実行されるディスパッチャーとワーカーサービスは、このポート番号を使ってエージェントと通信できる必要があります。
+
+..
+    To summarize:
+
+要約すると:
+
+..
+    * Communication from guest virtual machines to the dispatcher server on port 3302
+
+* ゲスト仮想マシンからディスパッチャーサーバーの3302番ポートと通信します
+
+..
+    * Communication from the dispatcher service to the guest virtual machines on port 2003
+
+* ディスパッチャーサービスからゲスト仮想マシンの2003番ポートと通信します
+
+..
+    enStratus Communications
+    ~~~~~~~~~~~~~~~~~~~~~~~~
+
+enStratus の通信
+~~~~~~~~~~~~~~~~
+
+..
+    The purpose of this section is to clarify the communication channels required by the individual enStratus
+    components. Ports listed are default and/or standard service ports and are subject to any customizations made
+    by the installing engineers.
+
+このセクションの目的は、個々の enStratus コンポーネントに必要な通信チャネルを明確にすることです。デフォルト、標準サービスの両方またはいずれか一方のポート番号を列挙しました。任意のカスタマイズにも対応できます。
+
+..
+    Example
+    ^^^^^^^
+
+例
+^^
+
+..
+    Let's assume that the enStratus installation is using the 4-server model shown above. The worker and
+    dispatcher servers and their associated services can be moved as necessary to a separate network provided the
+    communication paths between remain. This principle holds for any of the enstratus components.
+
+これまでに説明した4台のサーバーを使って enStratus をインストールしたと仮定します。ワーカーとディスパッチャーサーバーとその関連サービスは、通信パスを提供している別々のネットワークに対して必要に応じて移行できます。このプリンシパルは、任意の enstratus コンポーネントを保持します。
+
+..
+    enStratus has a very flexible architecture. If you are an administrator of the enStratus software, you should
+    feel free to move components and architect the most appropriate solution for your cloud environment.
+
+enStratus は、かなり柔軟なアーキテクチャをもちます。enStratus ソフトウェアの管理者なら、コンポーネントを自由に移行したり、クラウド環境に最も適したソリューションを設計できるはずです。
+
+..
+    enStratus Internal/External Communications
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+enStratus の内部/外部通信
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+..
+    +--------------------+-----------------+----------------------------------------------------+---------------------------------------------------------------+
+    | Component          | Listens IP:Port | Accepts From                                       | Initiates To                                                  | 
+    +====================+=================+====================================================+===============================================================+
+    | Console            | $IP:80, $IP:443 | Internet (or equivalent), API, LDAP/AD             | LDAP/AD, Dispatcher, Console (MySQL)                          |
+    +--------------------+-----------------+----------------------------------------------------+---------------------------------------------------------------+
+    | Console (MySQL)    | $IP:3306        | Console Service, API, LDAP/AD                      | N/A                                                           |
+    +--------------------+-----------------+----------------------------------------------------+---------------------------------------------------------------+
+    | KM                 | $IP:2013        | Dispatcher, Worker, Monitor                        | KM (MySQL)                                                    |
+    +--------------------+-----------------+----------------------------------------------------+---------------------------------------------------------------+
+    | Dispatcher         | $IP:3302        | Internet (guest vm), API, Monitor, Worker, Console | Dispatcher (MySQL), RabbitMQ, KM, Monitor, Worker, Cloud API  |
+    +--------------------+-----------------+----------------------------------------------------+---------------------------------------------------------------+
+    | Dispatcher (MySQL) | $IP:3306        | Dispatcher, Monitor, Worker                        | N/A                                                           |
+    +--------------------+-----------------+----------------------------------------------------+---------------------------------------------------------------+
+    | Monitor/Worker     | N/A             | N/A                                                | Cloud API, Dispatcher, Dispatcher MySQL, RabbitMQ, KM         |
+    +--------------------+-----------------+----------------------------------------------------+---------------------------------------------------------------+
+    | RabbitMQ           | $IP:5672        | Dispatcher, Monitor, Worker                        | N/A                                                           |
+    +--------------------+-----------------+----------------------------------------------------+---------------------------------------------------------------+
+    | API                | $IP:15000       | Internet (or equivalent)                           | Dispatcher, Console MySQL                                     |
+    +--------------------+-----------------+----------------------------------------------------+---------------------------------------------------------------+
 
 .. tabularcolumns:: |l|l|p{5cm}|p{5cm}|
 
-+--------------------+-----------------+----------------------------------------------------+---------------------------------------------------------------+
-| Component          | Listens IP:Port | Accepts From                                       | Initiates To                                                  | 
-+====================+=================+====================================================+===============================================================+
-| Console            | $IP:80, $IP:443 | Internet (or equivalent), API, LDAP/AD             | LDAP/AD, Dispatcher, Console (MySQL)                          |
-+--------------------+-----------------+----------------------------------------------------+---------------------------------------------------------------+
-| Console (MySQL)    | $IP:3306        | Console Service, API, LDAP/AD                      | N/A                                                           |
-+--------------------+-----------------+----------------------------------------------------+---------------------------------------------------------------+
-| KM                 | $IP:2013        | Dispatcher, Worker, Monitor                        | KM (MySQL)                                                    |
-+--------------------+-----------------+----------------------------------------------------+---------------------------------------------------------------+
-| Dispatcher         | $IP:3302        | Internet (guest vm), API, Monitor, Worker, Console | Dispatcher (MySQL), Rabbit MQ, KM, Monitor, Worker, Cloud API |
-+--------------------+-----------------+----------------------------------------------------+---------------------------------------------------------------+
-| Dispatcher (MySQL) | $IP:3306        | Dispatcher, Monitor, Worker                        | N/A                                                           |
-+--------------------+-----------------+----------------------------------------------------+---------------------------------------------------------------+
-| Monitor/Worker     | N/A             | N/A                                                | Cloud API, Dispatcher, Dispatcher MySQL, Rabbit MQ, KM        |
-+--------------------+-----------------+----------------------------------------------------+---------------------------------------------------------------+
-| Rabbit MQ          | $IP:5672        | Dispatcher, Monitor, Worker                        | N/A                                                           |
-+--------------------+-----------------+----------------------------------------------------+---------------------------------------------------------------+
-| API                | $IP:15000       | Internet (or equivalent)                           | Dispatcher, Console MySQL                                     |
-+--------------------+-----------------+----------------------------------------------------+---------------------------------------------------------------+
++--------------------------------+-----------------------------+-----------------------------------------------------------------+------------------------------------------------------------------------------+
+| コンポーネント                 | 受付 IP アドレス:ポート番号 | 通信元                                                          | 通信先                                                                       |
++================================+=============================+=================================================================+==============================================================================+
+| コンソール                     | $IP:80, $IP:443             | インターネット (または相当するもの)、API、LDAP/広告             | LDAP/AD、ディスパッチャー、コンソール (MySQL)                                |
++--------------------------------+-----------------------------+-----------------------------------------------------------------+------------------------------------------------------------------------------+
+| コンソール (MySQL)             | $IP:3306                    | コンソールサービス、API、LDAP/AD                                | N/A                                                                          |
++--------------------------------+-----------------------------+-----------------------------------------------------------------+------------------------------------------------------------------------------+
+| 鍵管理                         | $IP:2013                    | ディスパッチャー、ワーカー、モニター                            | 鍵管理 (MySQL)                                                               |
++--------------------------------+-----------------------------+-----------------------------------------------------------------+------------------------------------------------------------------------------+
+| ディスパッチャー               | $IP:3302                    | インターネット (ゲスト VM)、API、モニター、ワーカー、コンソール | ディスパッチャー (MySQL)、RabbitMQ、鍵管理、モニター、ワーカー、クラウド API |
++--------------------------------+-----------------------------+-----------------------------------------------------------------+------------------------------------------------------------------------------+
+| ディスパッチャー (MySQL)       | $IP:3306                    | ディスパッチャー、モニター、ワーカー                            | N/A                                                                          |
++--------------------------------+-----------------------------+-----------------------------------------------------------------+------------------------------------------------------------------------------+
+| モニター/ワーカー              | N/A                         | N/A                                                             | クラウド API、ディスパッチャー、ディスパッチャー (MySQL)、RabbitMQ、鍵管理   |
++--------------------------------+-----------------------------+-----------------------------------------------------------------+------------------------------------------------------------------------------+
+| RabbitMQ                       | $IP:5672                    | ディスパッチャー、モニター、ワーカー                            | N/A                                                                          |
++--------------------------------+-----------------------------+-----------------------------------------------------------------+------------------------------------------------------------------------------+
+| API                            | $IP:15000                   | インターネット (または相当するもの)                             | ディスパッチャー、コンソール (MySQL)                                         |
++--------------------------------+-----------------------------+-----------------------------------------------------------------+------------------------------------------------------------------------------+
