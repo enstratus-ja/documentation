@@ -15,7 +15,7 @@ enStratus の自動化機能
     Welcome to the enStratus Automation portal. Use the menu on the left to learn more about
     cloud automation using enStratus.
 
-EnStratus の自動化ポータルへようこうそ。メニューから選択して EnStratus を使ったクラウドの自動化について学びます。
+enStratus の自動化ポータルへようこうそ。メニューから選択して enStratus を使ったクラウドの自動化について学びます。
 
 .. figure:: ./images/deployment.png
    :height: 430px
