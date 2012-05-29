@@ -1,5 +1,9 @@
-Example Files
--------------
+..
+    Example Files
+    -------------
+
+サンプルファイル
+----------------
 
 install.credentials
 ~~~~~~~~~~~~~~~~~~~
