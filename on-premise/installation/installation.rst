@@ -1,6 +1,10 @@
+..
+    Installation
+    ============
+
 .. _installation:
 
-Installation
+インストール
 ============
 
 
