@@ -1,7 +1,11 @@
+..
+    Troubleshooting
+    ===============
+
 .. _troubleshooting:
 
-Troubleshooting
-===============
+トラブルシューティング
+======================
 
 .. toctree::
    :maxdepth: 1
