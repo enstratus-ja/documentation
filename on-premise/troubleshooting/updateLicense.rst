@@ -1,25 +1,55 @@
-Update License Key
-------------------
+..
+    Update License Key
+    ------------------
 
-Updating your enStratus license key can be accomplished using the following steps.
+ライセンスキーの更新
+--------------------
 
-Required Information
-~~~~~~~~~~~~~~~~~~~~
+..
+    Updating your enStratus license key can be accomplished using the following steps.
 
-#. Access to the provisioning database.
-#. License key
+enStratus ライセンスキーの更新は、次の手順で行います。
 
-Updating the Key
-~~~~~~~~~~~~~~~~
+..
+    Required Information
+    ~~~~~~~~~~~~~~~~~~~~
+
+必要な情報
+~~~~~~~~~~
+
+..
+    #. Access to the provisioning database.
+    #. License key
+
+#. プロビジョニングされたデータベースへのアクセス
+#. ライセンスキー
+
+..
+    Updating the Key
+    ~~~~~~~~~~~~~~~~
+
+キーの更新
+~~~~~~~~~~
 
 .. code-block:: mysql
 
   update backend_configuration set license_key='abcd1234';
 
-Finishing Up
-~~~~~~~~~~~~
+..
+    Finishing Up
+    ~~~~~~~~~~~~
 
-Once the key is updated, you will need to restart the dependent services.
+仕上げ
+~~~~~~
 
-* Dispatcher
-* Workers/Monitors
+..
+    Once the key is updated, you will need to restart the dependent services.
+
+キーが更新されると、依存するサービスを再起動する必要があります。
+
+..
+    * Dispatcher
+    * Workers/Monitors
+
+* ディスパッチャー
+* ワーカー/モニター
