@@ -1,7 +1,11 @@
+..
+    Console
+    =======
+
 .. _console:
 
-Console
-=======
+コンソール
+==========
 
 .. toctree::
    :maxdepth: 1
