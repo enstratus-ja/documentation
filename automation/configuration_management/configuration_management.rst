@@ -24,7 +24,7 @@ Chef
     Chef is a configuration management tool created by Opscode. enStratus support both the
     hosted and private versions of Chef.
 
-Chef は、Opscode が開発した構成管理ツールです。enStratus は、Chef のホストとプライベート両方のバージョンに対応しています。
+Chef は、Opscode が開発した構成管理ツールです。enStratus は、Chef のホスティングとプライベート両方のバージョンに対応しています。
 
 ..
     Object Store is a simple script based Configuration Management System that allows you to
@@ -33,7 +33,7 @@ Chef は、Opscode が開発した構成管理ツールです。enStratus は、
     account.
     Services
 
-Object Store は、カスタムスクリプトをクラウドストレージアカウントや、グループスクリプトを関連場所にアップロードします。そして、クラウドで新たなサーバーが起動するとき、自動的にダウンロードして、そのスクリプトを実行します。
+Object Store は、カスタムスクリプトをクラウドストレージアカウントや、グループスクリプトを "Personaliteis" にアップロードします。そして、クラウドで新たなサーバーが起動するとき、自動的にダウンロードして、そのスクリプトを実行します。
 
 ..
     To implement configuration management, you must first configure a service under
@@ -56,7 +56,7 @@ Object Store は、カスタムスクリプトをクラウドストレージア�
     Chef service you associate a set of credentials with that account. Credentials are not
     necessary for Object Store services.
 
-サービスを設定したら、"Configuration Management > Accounts" からそのサービスに関連付けるアカウントを作成する必要があります。Chef サービスにアカウントを設定する場合、そのアカウントの一連の認証情報を関連付けます。Object Store サービスは認証情報を必要としません。
+サービスを設定したら、"Configuration Management > Accounts" からそのサービスに関連付けるアカウントを作成する必要があります。Chef サービスにアカウントを設定する場合、そのアカウントの認証情報を関連付けます。Object Store サービスは認証情報を必要としません。
 
 ..
     Multiple accounts may be attached to the same Chef service with different sets of
