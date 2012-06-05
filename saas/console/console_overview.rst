@@ -17,7 +17,7 @@
     User Profile
     ~~~~~~~~~~~~
 
-ユーザープロファイル
+ユーザープロフィール
 ~~~~~~~~~~~~~~~~~~~~
 
 ..
@@ -30,13 +30,13 @@
    :alt: User Profile
    :align: center
 
-   ユーザープロファイル
+   ユーザープロフィール
 
 ..
     The name of the person currently logged in to the enStratus console. Clicking on this link
     provides functionality for editing user profile or for changing the user's password.
 
-現在の enStratus コンソールにログインしている方の名前です。このリンクをクリックすると、ユーザープロファイルを編集したり、ユーザーのパスワードを変更する機能を提供します。
+現在の enStratus コンソールにログインしている方の名前です。このリンクをクリックすると、ユーザープロフィールを編集したり、ユーザーのパスワードを変更する機能を提供します。
 
 ..
     Account
