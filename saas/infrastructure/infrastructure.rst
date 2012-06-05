@@ -1,7 +1,11 @@
+..
+    Infrastructure
+    ==============
+
 .. _saas_infrastructure:
 
-Infrastructure
-==============
+インフラストラクチャ
+====================
 
 .. toctree::
    :maxdepth: 1
