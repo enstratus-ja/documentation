@@ -1,11 +1,18 @@
+..
+    Platform
+    ========
+
 .. _saas_platform:
 
-Platform
-========
+プラットフォーム
+================
 
-Many clouds support Platform-as-a-Service (PaaS) offerings such as cloud files/object
-storage, databases, and content distribution systems. Accessing PaaS offerings using
-enStratus is done via the Platform menu.
+..
+    Many clouds support Platform-as-a-Service (PaaS) offerings such as cloud files/object
+    storage, databases, and content distribution systems. Accessing PaaS offerings using
+    enStratus is done via the Platform menu.
+
+多くのクラウドは、クラウドのファイル/オブジェクトストレージ、データベース、コンテンツ配布システムといった、サービスとしてのプラットフォーム (PaaS) オファリングに対応しています。enStratus から PaaS オファリングへアクセスするには、"Platform" メニューを経由して行います。
 
 .. toctree::
    :maxdepth: 1
