@@ -1,7 +1,11 @@
+..
+    Agent
+    =====
+
 .. _agent:
 
-Agent
-=====
+エージェント
+============
 
 .. toctree::
    :maxdepth: 1
