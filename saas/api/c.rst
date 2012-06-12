@@ -1,5 +1,9 @@
-C# Examples
------------
+..
+    C# Examples
+    -----------
+
+C# の例
+-------
 
 .. code-block:: c
 
