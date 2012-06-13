@@ -1,37 +1,90 @@
-Console
--------
+..
+    Console
+    -------
 
-The enStratus console is a tomcat service installed to /services/console.
+コンソール
+----------
 
-Console Overview
+..
+    The enStratus console is a tomcat service installed to /services/console.
+
+enStratus コンソールは、/services/console にインストールされる tomcat サービスです。
+
+..
+    Console Overview
+    ~~~~~~~~~~~~~~~~
+
+コンソールの概要
 ~~~~~~~~~~~~~~~~
-The enStratus console service is a tomcat service that provides the web front-end, or enStratus user console.
 
-Starting Console
+..
+    The enStratus console service is a tomcat service that provides the web front-end, or enStratus user console.
+
+enStratus コンソールサービスは、web のフロントエンド、または enStratus のユーザーコンソールを提供する tomcat サービスです。
+
+..
+    Starting Console
+    ~~~~~~~~~~~~~~~~
+
+コンソールの起動
 ~~~~~~~~~~~~~~~~
-To start the console service:
+
+..
+    To start the console service:
+
+コンソールサービスを開始するには次のようにします:
 
 .. code-block:: bash
 
 	/etc/init.d/enstratus-console start
 
-Console Start Process
-^^^^^^^^^^^^^^^^^^^^^
-The console init script performs the following action:
+..
+    Console Start Process
+    ^^^^^^^^^^^^^^^^^^^^^
 
-#. Executes /services/console/bin/tomcat, passing it the argument: start. This starts the console process.
+コンソールプロセスの開始
+^^^^^^^^^^^^^^^^^^^^^^^^
 
-Stopping Console
+..
+    The console init script performs the following action:
+
+コンソールの init スクリプトは、次のアクションを実行します:
+
+..
+    #. Executes /services/console/bin/tomcat, passing it the argument: start. This starts the console process.
+
+#. /services/console/bin/tomcat に "start" 引数を渡して実行します。これは、コンソールプロセスを開始します。
+
+..
+    Stopping Console
+    ~~~~~~~~~~~~~~~~
+
+コンソールの停止
 ~~~~~~~~~~~~~~~~
-To stop the console service:
+
+..
+    To stop the console service:
+
+コンソールサービスを停止するには次のようにします:
 
 .. code-block:: bash
 
 	/etc/init.d/enstratus-console stop
 
-Console Stop Process
-^^^^^^^^^^^^^^^^^^^^
-The console init script performs the following action:
+..
+    Console Stop Process
+    ^^^^^^^^^^^^^^^^^^^^
 
-#. Executes /services/console/bin/tomcat, passing it the argument: stop. This stops the console process.
+コンソールの停止プロセス
+^^^^^^^^^^^^^^^^^^^^^^^^
+
+..
+    The console init script performs the following action:
+
+コンソールの init スクリプトは、次のアクションを実行します:
+
+..
+    #. Executes /services/console/bin/tomcat, passing it the argument: stop. This stops the console process.
+
+#. /services/console/bin/tomcat に "stop" 引数を渡して実行します。これは、コンソールプロセスを停止します。
 
