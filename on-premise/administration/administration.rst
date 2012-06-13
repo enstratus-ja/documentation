@@ -1,7 +1,11 @@
+..
+    enStratus Administration
+    ========================
+
 .. _administration:
 
-enStratus Administration
-========================
+enStratus 管理機能
+==================
 
 .. toctree::
    :maxdepth: 1
