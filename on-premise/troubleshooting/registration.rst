@@ -1,14 +1,24 @@
+..
+    Registration
+    ------------
+
 .. _registration:
 
-Registration
-------------
+登録
+----
 
-After installing the enStratus cloud management software, you will be directed to proceed
-to the url you specified as part of the installation process. For example:
+..
+    After installing the enStratus cloud management software, you will be directed to proceed
+    to the url you specified as part of the installation process. For example:
+
+enStratus クラウド管理ソフトウェアをインストールした後、インストール処理の一部で指定された url に進むよう指示があります。例えば:
 
 .. code-block:: bash
 
    https://build.enstratus.com/page/1/register.jsp
+
+..
+   Registration
 
 .. figure:: ./images/register.png
    :height: 700px
@@ -17,16 +27,23 @@ to the url you specified as part of the installation process. For example:
    :alt: Registration
    :align: center
 
-   Registration
+   登録
 
-Java Cryptographic Extensions
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+..
+    Java Cryptographic Extensions
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Tailing the dispatcher log after a new installation is helpful because it can tell you
-about common configuration errors. For example, enStratus depends on the Java
-Cryptographic Extensions to encrypt inter-process communications. If they are not
-installed, and a registration attempt is made, the following error will be visible in the
-dispatcher log:
+Java 暗号化拡張
+~~~~~~~~~~~~~~~
+
+..
+    Tailing the dispatcher log after a new installation is helpful because it can tell you
+    about common configuration errors. For example, enStratus depends on the Java
+    Cryptographic Extensions to encrypt inter-process communications. If they are not
+    installed, and a registration attempt is made, the following error will be visible in the
+    dispatcher log:
+
+新規インストール後にディスパッチャーログの末尾を確認すると役に立つでしょう。というのは、一般的な設定エラーが分かるからです。例えば、enStratus は、プロセス間通信を暗号化するのに Java の暗号化拡張機能に依存します。この機能がインストールされてなくて、登録しようとした場合、次のエラーがディスパッチャーログに出力されます:
 
 .. code-block:: bash
 
@@ -44,13 +61,23 @@ dispatcher log:
      at com.enstratus.util.EncryptionVersion.decryptTwo(EncryptionVersion.java:121)
      at com.enstratus.util.EncryptionVersion.decrypt(EncryptionVersion.java:80)
 
-Install the JCE for your version of Java, restart all affected processes (dispatcher, km,
-console, etc.), and try again.
+..
+    Install the JCE for your version of Java, restart all affected processes (dispatcher, km,
+    console, etc.), and try again.
 
-Successful Registration
-~~~~~~~~~~~~~~~~~~~~~~~
+利用中の Java バージョンの JCE をインストールし、全ての関連プロセス (ディスパッチャー、キーマネージャー、コンソールなど) を再起動して、やり直してください。
 
-In the dispatcher log, a successful registration looks like this:
+..
+    Successful Registration
+    ~~~~~~~~~~~~~~~~~~~~~~~
+
+登録成功
+~~~~~~~~
+
+..
+    In the dispatcher log, a successful registration looks like this:
+
+登録に成功すると、ディスパッチャーのログには次のように出力されます:
 
 .. code-block:: bash
 
@@ -84,11 +111,20 @@ In the dispatcher log, a successful registration looks like this:
    com.enstratus.provisioning.customer.service.CustomerServiceImpl.createCustomerBilling(enStratus
    [#200],null,enStratus,enStratus Entry Plan,Default [DEF])
 
-A successful registration indicates that the core components of the enStratus management
-system are operational (KM, Dispatcher, and Console).
+..
+    A successful registration indicates that the core components of the enStratus management
+    system are operational (KM, Dispatcher, and Console).
 
-After registration, you should be directed to log in for the first time, using the
-credentials created during registration.
+登録に成功すると、enStratus 管理システムのコアコンポーネントが運用可能になります (キーマネージャー、ディスパッチャー、コンソール) 。
+
+..
+    After registration, you should be directed to log in for the first time, using the
+    credentials created during registration.
+
+登録後、登録作業中に作成した認証情報を使って、初回だけログインするように指示があります。
+
+..
+   Login
 
 .. figure:: ./images/login.png
    :height: 300px
@@ -97,7 +133,10 @@ credentials created during registration.
    :alt: Login
    :align: center
 
-   Login
+   ログイン
 
-If this is the first time logging in or there are no cloud accounts yet associated with
-enStratus, you will directed to select a cloud and enter credentials.
+..
+    If this is the first time logging in or there are no cloud accounts yet associated with
+    enStratus, you will directed to select a cloud and enter credentials.
+
+これが初回ログイン、または enStratus に関連付けられたクラウドアカウントがない場合、クラウドを選択して認証情報を入力するように指示があります。
