@@ -1,39 +1,75 @@
+..
+    Monitors
+    --------
+
 .. _monitors:
 
-Monitors
+モニター
 --------
 
-The enStratus monitor service is a java service installed to /services/monitor.
+..
+    The enStratus monitor service is a java service installed to /services/monitor.
 
-Monitor Overview
-~~~~~~~~~~~~~~~~
+enStratus モニターサービスは、/services/monitor にインストールされる java サービスです。
 
-.. note:: The enStratus monitors service is in the process of being deprecated in favor of
-   a more efficient workers process. 
+..
+    Monitor Overview
+    ~~~~~~~~~~~~~~~~
 
-The enStratus monitors service is responsible for maintaining an accurate representation of cloud state,
-checking on the completion of jobs initiated by the dispatcher service, orchestrating server launches and
-service installations.
+モニターの概要
+~~~~~~~~~~~~~~
 
-Starting Monitor
-~~~~~~~~~~~~~~~~
+.. note::
+   ..
+       The enStratus monitors service is in the process of being deprecated in favor of
+       a more efficient workers process. 
 
-To start the monitor services:
+   enStratus モニターサービスは、より効率的なワーカープロセスにより、廃止されるプロセスです。
+
+..
+    The enStratus monitors service is responsible for maintaining an accurate representation of cloud state,
+    checking on the completion of jobs initiated by the dispatcher service, orchestrating server launches and
+    service installations.
+
+enStratus モニターサービスは、クラウドの正確な状態情報、ディスパッチャーサービスが開始したジョブの完了チェック、サーバー起動のオーケストレーションやサービスのインストールなどをメンテナンスする役割を担います。
+
+..
+    Starting Monitor
+    ~~~~~~~~~~~~~~~~
+
+モニターの開始
+~~~~~~~~~~~~~~
+
+..
+    To start the monitor services:
+
+モニターサービスを開始するには次のようにします:
 
 .. code-block:: bash
 
 	/etc/init.d/enstratus-monitor start
 
-Monitor Start Process
-^^^^^^^^^^^^^^^^^^^^^
+..
+    Monitor Start Process
+    ^^^^^^^^^^^^^^^^^^^^^
 
-The monitor init script performs the following actions:
+モニターの開始プロセス
+^^^^^^^^^^^^^^^^^^^^^^
 
-#. Executes /services/monitor/bin/assign. This starts the assignment service, which is responsible for controlling the monitor services.
-#. The monitor start process cycles through a list of monitors designated in the file
-   called /services/monitor/etc/monitors.cfg, executing a call to /services/monitor/bin/poll,
-   with the start argument, as shown. Each monitor process has an associated log file located
-   in /services/monitor/log.
+..
+    The monitor init script performs the following actions:
+
+モニターの init スクリプトは、次のアクションを実行します:
+
+..
+    #. Executes /services/monitor/bin/assign. This starts the assignment service, which is responsible for controlling the monitor services.
+    #. The monitor start process cycles through a list of monitors designated in the file
+       called /services/monitor/etc/monitors.cfg, executing a call to /services/monitor/bin/poll,
+       with the start argument, as shown. Each monitor process has an associated log file located
+       in /services/monitor/log.
+
+#. /services/monitor/bin/assign を実行します。これは、モニターサービスを制御する割り当てサービスを開始します。
+#. モニターの開始プロセスは、/services/monitor/etc/monitors.cfg というファイルで指定されたモニターのリストを読み込み、次のように /services/monitor/bin/poll に "start" 引数を渡して実行する処理を繰り返します。各モニターのプロセスは /services/monitor/log にログファイルを保存します。
 
 .. code-block:: bash
 
@@ -71,25 +107,49 @@ The monitor init script performs the following actions:
 	/services/monitor/bin/poll start Volume 1
 	/services/monitor/bin/poll start VPNGateway 1
 
-Stopping Monitor
-~~~~~~~~~~~~~~~~
-To stop the monitor services:
+..
+    Stopping Monitor
+    ~~~~~~~~~~~~~~~~
+
+モニターの停止
+~~~~~~~~~~~~~~
+
+..
+    To stop the monitor services:
+
+モニターサービスを停止するには次のようにします:
 
 .. code-block:: bash
 
 	/etc/init.d/enstratus-monitor stop
 
-Monitor Stop Process
-^^^^^^^^^^^^^^^^^^^^
-The monitor init script performs the following actions:
+..
+    Monitor Stop Process
+    ^^^^^^^^^^^^^^^^^^^^
 
-#. Executes /services/dispatcher/bin/assign, passing the stop argument. This stops the assignment service.
-#. The monitor start process cycles through a list of monitors designated in the file
-   called /services/monitor/etc/monitors.cfg, executing a call to /services/monitor/bin/poll,
-   with the stop argument, as shown. Each monitor process has an associated log file located
-   in /services/monitor/log.
+モニターの停止プロセス
+^^^^^^^^^^^^^^^^^^^^^^
 
-.. note:: The monitor stop process is slow and not terribly reliable. A less elegant, yet faster method for
-	 terminating the monitor processes is to issue the command:
+..
+    The monitor init script performs the following actions:
 
-	 ps -ef | grep onit | awk '{print $2}' | while read line; do kill -9 $line; done
+モニターの init スクリプトは、次のアクションを実行します:
+
+..
+    #. Executes /services/dispatcher/bin/assign, passing the stop argument. This stops the assignment service.
+    #. The monitor start process cycles through a list of monitors designated in the file
+       called /services/monitor/etc/monitors.cfg, executing a call to /services/monitor/bin/poll,
+       with the stop argument, as shown. Each monitor process has an associated log file located
+       in /services/monitor/log.
+
+#. /services/monitor/bin/assign を実行します。これは、モニターサービスを制御する割り当てサービスを停止します。
+#. モニターの停止プロセスは、/services/monitor/etc/monitors.cfg というファイルで指定されたモニターのリストを読み込み、次のように /services/monitor/bin/poll に "stop" 引数を渡して実行する処理を繰り返します。各モニターのプロセスは /services/monitor/log にログファイルを保存します。
+
+.. note::
+   ..
+       The monitor stop process is slow and not terribly reliable. A less elegant, yet faster method for
+       terminating the monitor processes is to issue the command:
+   
+   モニターの停止プロセスは、遅い上にそれほど信頼性もありません。見た目は悪いですが、モニタープロセスを停止する手っとり早い方法としては、次のコマンドがあります:
+
+   ps -ef | grep onit | awk '{print $2}' | while read line; do kill -9 $line; done

@@ -1,39 +1,86 @@
+..
+    Workers
+    -------
+
 .. _workers:
 
-Workers
--------
+ワーカー
+--------
 
-Worker Overview
-~~~~~~~~~~~~~~~~
-The enStratus worker service consists of two components, a publisher and a subscriber. At a very high level,
-these components:
+..
+    Worker Overview
+    ~~~~~~~~~~~~~~~~
 
-1. Publisher
+ワーカーの概要
+~~~~~~~~~~~~~~
 
-  - The publisher is responsible for pushing actions onto a queue. 
+..
+    The enStratus worker service consists of two components, a publisher and a subscriber. At a very high level,
+    these components:
 
-2. Subscriber
+enStratus ワーカーサービスは、2つのコンポーネント、パブリッシャー (publisher) とサブスクライバー (subscriber) で構成されます。これらのコンポーネントの高水準なものです:
 
-  - The subscriber is responsible for taking actions off of the queue and acting accordingly.
+1. パブリッシャー
 
-Starting Worker
-~~~~~~~~~~~~~~~
-To start the worker service:
+   ..  - The publisher is responsible for pushing actions onto a queue.
+
+   - パブリッシャーは、アクションをキューに追加する役割を担います。
+
+..
+    2. Subscriber
+
+2. サブスクライバー
+
+   ..  - The subscriber is responsible for taking actions off of the queue and acting accordingly.
+
+   - サブスクライバーは、必要なときにキューから取り出すアクションを行う役割を担います。
+
+..
+    Starting Worker
+    ~~~~~~~~~~~~~~~
+
+ワーカーの開始
+~~~~~~~~~~~~~~
+
+..
+    To start the worker service:
+
+ワーカーサービスを開始するには次のようにします:
 
 .. code-block:: bash
 
 	/etc/init.d/enstratus-workers start
 
-Worker Start Process
-^^^^^^^^^^^^^^^^^^^^^
-The worker init script performs the following actions:
+..
+    Worker Start Process
+    ^^^^^^^^^^^^^^^^^^^^^
 
-#. Executes /services/worker/bin/publisher, passing it the argument: start. This starts the publisher process.
-#. Executes /services/worker/bin/subscriber, passing it the argument: start. This starts the subscriber process.
+ワーカーの開始プロセス
+^^^^^^^^^^^^^^^^^^^^^^
 
-Stopping Worker
-~~~~~~~~~~~~~~~
-To stop the worker service:
+..
+    The worker init script performs the following actions:
+
+ワーカーの init スクリプトは、次のアクションを実行します:
+
+..
+    #. Executes /services/worker/bin/publisher, passing it the argument: start. This starts the publisher process.
+    #. Executes /services/worker/bin/subscriber, passing it the argument: start. This starts the subscriber process.
+
+#. /services/worker/bin/publisher に "start" 引数を渡して実行します。これは、パブリッシャープロセスを開始します。
+#. /services/worker/bin/subscriber に "start" 引数を渡して実行します。これは、サブスクライバープロセスを開始します。
+
+..
+    Stopping Worker
+    ~~~~~~~~~~~~~~~
+
+ワーカーの停止
+~~~~~~~~~~~~~~
+
+..
+    To stop the worker service:
+
+ワーカーサービスを停止するには次のようにします:
 
 .. code-block:: bash
 
