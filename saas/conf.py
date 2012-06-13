@@ -125,7 +125,7 @@ html_theme_path = ['_themes']
 html_title = "The enStratus Documentation Project"
 
 # A shorter title for the navigation bar.  Default is the same as html_title.
-html_short_title = "On Premise"
+html_short_title = "SaaS"
 
 # The name of an image file (relative to this directory) to place at the top
 # of the sidebar.
