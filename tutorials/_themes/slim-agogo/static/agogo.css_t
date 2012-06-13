@@ -207,6 +207,7 @@ div.content-wrapper {
   background-color: white;
   padding-top: 20px;
   padding-bottom: 20px;
+  min-width: {{ theme_pagewidth }};
 }
 
 div.document {
@@ -385,6 +386,7 @@ div.footer-wrapper {
   padding-top: 10px;
   padding-bottom: 10px;
   min-height: 80px;
+  min-width: {{ theme_pagewidth }};
 }
 
 div.footer, div.footer a {
