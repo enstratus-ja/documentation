@@ -31,6 +31,6 @@ enStratus オンプレミスのドキュメントポータルへようこそ。�
 
    introduction/introduction
    installation/installation
-   services/services
+   administration/administration
    troubleshooting/troubleshooting
    advanced/advanced
