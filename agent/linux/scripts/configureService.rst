@@ -1,12 +1,12 @@
 configureService
-~~~~~~~~~~~~~~~~
+----------------
 
 ..
     Name
-    ++++
+    ~~~~
 
 名称
-++++
+~~~~
 
 ..
     configureService - Launcher for service-specific configuration script
@@ -15,19 +15,19 @@ configureService - サービス固有の構成スクリプトのランチャー
 
 ..
     Synopsis
-    ++++++++
+    ~~~~~~~~
 
 構文
-++++
+~~~~
 
 configureService USER_ID CUSTOMER_ID SERVICE_ID [[ SSL_ADDRESS CERT_FILE_PATH KEY_FILE_PATH ] CHAIN_FILE_PATH ]
 
 ..
     Description
-    +++++++++++
+    ~~~~~~~~~~~
 
 説明
-++++
+~~~~
 
 ..
     enStratus invokes the script /mnt/services/$SERVICE_ID/bin/enstratus-configure, if it exists, to run a service specific configuration script
@@ -36,10 +36,10 @@ configureService USER_ID CUSTOMER_ID SERVICE_ID [[ SSL_ADDRESS CERT_FILE_PATH KE
 
 ..
     Options
-    +++++++
+    ~~~~~~~
 
 オプション
-++++++++++
+~~~~~~~~~~
 
 USER_ID
     ..
@@ -85,19 +85,19 @@ CHAIN_FILE_PATH
 
 ..
     Examples
-    ++++++++
+    ~~~~~~~~
 
 例
-++
+~~
 
 configureService c100 c100 a12000
 
 ..
     Invocation
-    ++++++++++
+    ~~~~~~~~~~
 
 起動
-++++
+~~~~
 
 ..
     This script is called automatically by enStratus if the service needs to be configured in that server.
@@ -106,10 +106,10 @@ configureService c100 c100 a12000
 
 ..
     Dependencies
-    ++++++++++++
+    ~~~~~~~~~~~~
 
 依存関係
-++++++++
+~~~~~~~~
 
 ..
     * None
@@ -118,22 +118,22 @@ configureService c100 c100 a12000
 
 ..
     Permission
-    ++++++++++
+    ~~~~~~~~~~
 
 権限
-++++
+~~~~
 
 ..
-    It is launched by the enStratus user.
+    It is called by the enStratus user.
 
 enstratus ユーザーが実行します。
 
 ..
     Overrides
-    +++++++++
+    ~~~~~~~~~
 
 オーバーライド
-++++++++++++++
+~~~~~~~~~~~~~~
 
 ..
     Override: No

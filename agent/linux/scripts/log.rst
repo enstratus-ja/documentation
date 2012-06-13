@@ -1,12 +1,12 @@
 log
-~~~
+---
 
 ..
     Function
-    ++++++++
+    ~~~~~~~~
 
 機能
-++++
+~~~~
 
 ..
     It makes entries in the enstratus agent log
@@ -15,10 +15,10 @@ enStratus エージェントのログにエントリを作成します。
 
 ..
     Usage
-    +++++
+    ~~~~~
 
 使用法
-++++++
+~~~~~~
 
 log MESSAGE_1 ... MESSAGE_N
 
@@ -30,10 +30,10 @@ MESSAGE_1
 
 ..
     Invocation
-    ++++++++++
+    ~~~~~~~~~~
 
 起動
-++++
+~~~~
 
 ..
     It is used by enstratus agent and service configuration scripts for traceability and debugging purposes
@@ -42,19 +42,19 @@ enStratus エージェントやサービス構成スクリプトがトレーサ�
 
 ..
     Dependencies
-    ++++++++++++
+    ~~~~~~~~~~~~
 
 依存関係
-++++++++
+~~~~~~~~
 
 * Java
 
 ..
     Permissions
-    +++++++++++
+    ~~~~~~~~~~~
 
 権限
-++++
+~~~~
 
 ..
     It does not require administrative permission. Can be used by any system user allowed to execute the script.
@@ -63,10 +63,10 @@ enStratus エージェントやサービス構成スクリプトがトレーサ�
 
 ..
     Overrides
-    +++++++++
+    ~~~~~~~~~
 
 オーバーライド
-++++++++++++++
+~~~~~~~~~~~~~~
 
 ..
     Override: No

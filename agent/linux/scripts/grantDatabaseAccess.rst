@@ -1,12 +1,12 @@
 grantDatabaseAccess
-~~~~~~~~~~~~~~~~~~~
+-------------------
 
 ..
     Name
-    ++++
+    ~~~~
 
 名称
-++++
+~~~~
 
 ..
     grantDatabaseAccess - Triggers a service-specific script for granting database access to a client.
@@ -15,19 +15,19 @@ grantDatabaseAccess - データベースへのアクセス権をクライアン�
 
 ..
     Synopsis
-    ++++++++
+    ~~~~~~~~
 
 構文
-++++
+~~~~
 
 grantDatabaseAccess SERVICE_ID CONFIG_FILE 
 
 ..
     Description
-    +++++++++++
+    ~~~~~~~~~~~
 
 説明
-++++
+~~~~
 
 ..
     It invokes the script /mnt/services/$SERVICE_ID/bin/enstratus-dbgrant , if existent, to allow access to a database from another server
@@ -36,10 +36,10 @@ grantDatabaseAccess SERVICE_ID CONFIG_FILE
 
 ..
     Options
-    +++++++
+    ~~~~~~~
 
 オプション
-++++++++++
+~~~~~~~~~~
 
 SERVICE_ID
     ..
@@ -55,19 +55,19 @@ CONFIG_FILE
 
 ..
     Examples
-    ++++++++
+    ~~~~~~~~
 
 例
-++
+~~
 
 grantDatabaseAccess a123 /enstratus/ws/tomcat/temp/database6625343243682788319.cfg
 
 ..
     Invocation
-    ++++++++++
+    ~~~~~~~~~~
 
 起動
-++++
+~~~~
 
 ..
     This script is called automatically by enstratus during a deployment for any new server in a service depending of a Data Source
@@ -76,10 +76,10 @@ grantDatabaseAccess a123 /enstratus/ws/tomcat/temp/database6625343243682788319.c
 
 ..
     Dependencies
-    ++++++++++++
+    ~~~~~~~~~~~~
 
 依存関係
-++++++++
+~~~~~~~~
 
 ..
     * None
@@ -88,22 +88,22 @@ grantDatabaseAccess a123 /enstratus/ws/tomcat/temp/database6625343243682788319.c
 
 ..
     Permission
-    ++++++++++
+    ~~~~~~~~~~
 
 権限
-++++
+~~~~
 
 ..
-    It is launched by the enstratus user.
+    It is called by the enstratus user.
 
 enstratus ユーザーが実行します。
 
 ..
     Overrides
-    +++++++++
+    ~~~~~~~~~
 
 オーバーライド
-++++++++++++++
+~~~~~~~~~~~~~~
 
 ..
     Override: No

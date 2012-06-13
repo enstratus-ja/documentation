@@ -1,12 +1,12 @@
 configureRaid
-~~~~~~~~~~~~~
+-------------
 
 ..
     NAME
-    ++++
+    ~~~~
 
 名称
-++++
+~~~~
 
 ..
     configureRaid - Creates RAID devices
@@ -15,19 +15,19 @@ configureRaid - RAID デバイスを作成する
 
 ..
     Synopsis
-    ++++++++
+    ~~~~~~~~
 
 構文
-++++
+~~~~
 
 configureRaid DEVICE_ID VOLUMES...
 
 ..
     Description
-    +++++++++++
+    ~~~~~~~~~~~
 
 説明
-++++
+~~~~
 
 ..
     It creates a RAID device from a list of storage devices. Currently only RAID 0 (striped) volumes are supported 
@@ -36,10 +36,10 @@ configureRaid DEVICE_ID VOLUMES...
 
 ..
     Options
-    +++++++
+    ~~~~~~~
 
 オプション
-++++++++++
+~~~~~~~~~~
 
 DEVICE_ID
     ..
@@ -55,20 +55,20 @@ VOLUMES
 
 ..
     Examples
-    ++++++++
+    ~~~~~~~~
 
 例
-++
+~~
 
 /enstratus/bin/configureRaid md0 sdh sdi sdj
 	Creates the RAID 0 device /dev/md0 from volumes /dev/sdh, /dev/shi and /dev/sdj
 
 ..
     Invocation
-    ++++++++++
+    ~~~~~~~~~~
 
 起動
-++++
+~~~~
 
 ..
     This script is called when:
@@ -76,16 +76,17 @@ VOLUMES
 このスクリプトは次のときに実行されます:
 
 ..
-    * If a volume is created when manually launching a server from the Machine Images page and a RAID Level other that None is selected.
+    * If a volume is created when manually launching a server from the Machine Images page and
+      a RAID Level other that None is selected.
 
 * "Machine Images" ページから手動でサーバーを起動して、"RAID Level" に "None" 以外を選択したとき
 
 ..
     Dependencies
-    ++++++++++++
+    ~~~~~~~~~~~~
 
 依存関係
-++++++++
+~~~~~~~~
 
 * sudo
 * mdadm
@@ -93,22 +94,22 @@ VOLUMES
 
 ..
     Permission
-    +++++++++++
+    ~~~~~~~~~~
 
 権限
-++++
+~~~~
 
 ..
-    It is launched by the enstratus user. It needs sudo authority for creating the array
+    It is called by the enstratus user. It needs sudo authority for creating the array
 
 enstratus ユーザーが実行します。アレイを作成するために sudo 権限が必要です。
 
 ..
     Overrides
-    +++++++++
+    ~~~~~~~~~
 
 オーバーライド
-++++++++++++++
+~~~~~~~~~~~~~~
 
 ..
     Override: Yes, pre and post

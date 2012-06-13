@@ -1,12 +1,12 @@
 mount
-~~~~~
+-----
 
 ..
     Name
-    ++++
+    ~~~~
 
 名称
-++++
+~~~~
 
 ..
     mount - It mounts a storage device at a directory. 
@@ -15,10 +15,10 @@ mount -  ストレージデバイスをディレクトリにマウントする
 
 ..
     Description
-    +++++++++++
+    ~~~~~~~~~~~
 
 説明
-++++
+~~~~
 
 ..
     It mounts a storage device at a directory. Additional the mount point will be added to the /etc/fstab file so it is mounted automatically on server restart.
@@ -28,10 +28,10 @@ mount -  ストレージデバイスをディレクトリにマウントする
 
 ..
     Usage
-    +++++
+    ~~~~~
 
 使用法
-++++++
+~~~~~~
 
 mount DEVICE_ID FILE_SYSTEM MOUNT_POINT
 
@@ -56,7 +56,7 @@ MOUNT_POINT
 
 ..
     Invocation
-    ++++++++++
+    ~~~~~~~~~~
 
 ..
     This script is called when:
@@ -74,10 +74,10 @@ MOUNT_POINT
 
 ..
     Dependencies
-    ++++++++++++
+    ~~~~~~~~~~~~
 
 依存関係
-++++++++
+~~~~~~~~
 
 ..
     * sudo
@@ -88,22 +88,24 @@ MOUNT_POINT
 
 ..
     Permissions
-    +++++++++++
+    ~~~~~~~~~~~
 
 権限
-++++
+~~~~
 
 ..
-    It is launched by the enstratus user. It needs sudo authority for mounting a filesystem and editing the /etc/fstab file. User enstratus will own the mount point and will be writeable by the user and group enstratus.
+    It is called by the enstratus user. It needs sudo authority for mounting a filesystem and
+    editing the /etc/fstab file. User enstratus will own the mount point and will be writeable
+    by the user and group enstratus.
 
 enstratus ユーザーが実行します。ファイルシステムをマウントして /etc/fstab ファイルを編集するために sudo 権限が必要です。enstratus ユーザーは独自のマウントポイントを持ち、その enstratus ユーザーとグループで書き込みます。
 
 ..
     Overrides
-    +++++++++
+    ~~~~~~~~~
 
 オーバーライド
-++++++++++++++
+~~~~~~~~~~~~~~
 
 ..
     Override: Yes, pre and post

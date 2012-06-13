@@ -1,12 +1,12 @@
 calculateAgentData
-~~~~~~~~~~~~~~~~~~
+------------------
 
 ..
     Name
-    ++++
+    ~~~~
 
 名称
-++++
+~~~~
 
 ..
     calculateAgentData - Shell script called periodically to create a properties file with resource utilization
@@ -15,26 +15,25 @@ calculateAgentData - リソースの使用状況を含むプロパティファ�
 
 ..
     Synopsis
-    ++++++++
+    ~~~~~~~~
 
 構文
-++++
+~~~~
 
 calculateAgentData PROPSFILE
 
 ..
     Description
-    +++++++++++
+    ~~~~~~~~~~~
 
 説明
-++++
+~~~~
 
 ..
-    enStratus calls this script periodically to recalculate resource usage on the server. The script prints out a file in the form:
-     property=value
+    enStratus calls this script periodically to recalculate resource usage on the server. The
+    script prints out a file in the form: property=value
 
-enStratus は、サーバー上のリソースの使用状況を定期的に集計するためにこのスクリプトを実行します。このスクリプトは次の形式でファイルに出力します:
- property=value
+enStratus は、サーバー上のリソースの使用状況を定期的に集計するためにこのスクリプトを実行します。このスクリプトは property=value という形式でファイルに出力します。
 
 ..
     It is expected to output the following properties:
@@ -62,10 +61,10 @@ enStratus は、サーバー上のリソースの使用状況を定期的に集�
 
 ..
     Options
-    ++++++++
+    ~~~~~~~
 
 オプション
-++++++++++
+~~~~~~~~~~
 
 PROPSFILE
     ..
@@ -75,31 +74,32 @@ PROPSFILE
 
 ..
     Examples
-    ++++++++
+    ~~~~~~~~
 
 例
-++
+~~
 
 calculateAgentData /mnt/tmp/stats.properties
 
 ..
     Invocation
-    ++++++++++
+    ~~~~~~~~~~
 
 起動
-++++
+~~~~
 
 ..
-    This script is called periodically by the enstratus agent and its content sent to the provisioning server.
+    This script is called periodically by the enstratus agent and its content sent to the
+    provisioning server.
 
 このスクリプトは、enStratus エージェントが周期的に実行して、その内容はプロビジョニングされたサーバーへ送られます。
 
 ..
     Dependencies
-    ++++++++++++
+    ~~~~~~~~~~~~
 
 依存関係
-++++++++
+~~~~~~~~
 
 ..
     * Basic performance Unix tools:
@@ -108,22 +108,22 @@ calculateAgentData /mnt/tmp/stats.properties
 
 ..
     Permission
-    ++++++++++
+    ~~~~~~~~~~
 
 権限
-++++
+~~~~
 
 ..
-    It is launched by the enstratus user.
+    It is called by the enstratus user.
 
 enstratus ユーザーが実行します。
 
 ..
     Overrides
-    +++++++++
+    ~~~~~~~~~
 
 オーバーライド
-++++++++++++++
+~~~~~~~~~~~~~~
 
 ..
     Override: No

@@ -5,6 +5,7 @@ Linux
 
 .. toctree::
    :maxdepth: 1
+   :hidden:
 
    scripts/addUser
    scripts/assembleRaid

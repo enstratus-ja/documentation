@@ -1,12 +1,12 @@
 getUnixOS
-~~~~~~~~~
+---------
 
 ..
     Name
-    ++++
+    ~~~~
 
 名称
-++++
+~~~~
 
 ..
     getUnixOS -  Identifies Linux or Unix flavour
@@ -15,19 +15,19 @@ getUnixOS - Linux か Unix かを識別する
 
 ..
     Synopsis
-    ++++++++
+    ~~~~~~~~
 
 構文
-++++
+~~~~
 
 getUnixOS
 
 ..
     Description
-    +++++++++++
+    ~~~~~~~~~~~
 
 説明
-++++
+~~~~
 
 ..
     Identifies the Linux or Unix flavour based on the contents of the /usr/bin/lsb_release file
@@ -36,10 +36,10 @@ getUnixOS
 
 ..
     Options
-    ++++++++
+    ~~~~~~~
 
 オプション
-++++++++++
+~~~~~~~~~~
 
 ..
     None
@@ -48,10 +48,10 @@ getUnixOS
 
 ..
     Examples
-    ++++++++
+    ~~~~~~~~
 
 例
-++
+~~
 
 .. code-block:: sh
 
@@ -60,10 +60,10 @@ getUnixOS
 
 ..
     Invocation
-    ++++++++++
+    ~~~~~~~~~~
 
 起動
-++++
+~~~~
 
 ..
     It may be invoked by any script that needs to determine the Linux flavour in the server
@@ -72,10 +72,10 @@ getUnixOS
 
 ..
     Dependencies
-    ++++++++++++
+    ~~~~~~~~~~~~
 
 依存関係
-++++++++
+~~~~~~~~
 
 ..
     * No
@@ -84,10 +84,10 @@ getUnixOS
 
 ..
     Permission
-    ++++++++++
+    ~~~~~~~~~~
 
 権限
-++++
+~~~~
 
 ..
     No administrative permission required.
@@ -96,10 +96,10 @@ getUnixOS
 
 ..
     Overrides
-    +++++++++
+    ~~~~~~~~~
 
 オーバーライド
-++++++++++++++
+~~~~~~~~~~~~~~
 
 ..
     Override: No

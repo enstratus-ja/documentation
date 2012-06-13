@@ -1,12 +1,12 @@
 addUser
-~~~~~~~
+-------
 
 ..
     NAME
-    ++++
+    ~~~~
 
 名称
-++++
+~~~~
 
 ..
     addUser - Grants the specified user shell access to the server
@@ -15,19 +15,19 @@ addUser - 指定したユーザーにサーバーへのシェルアクセスを�
 
 ..
     SYNOPSIS
-    ++++++++
+    ~~~~~~~~
 
 構文
-++++
+~~~~
 
 addUser CUST_ID USER_ID FIRST_NAME LAST_NAME ADMINISTRATOR
 
 ..
     DESCRIPTION
-    +++++++++++
+    ~~~~~~~~~~~
 
 説明
-++++
+~~~~
 
 ..
     It creates a system user for Linux/Unix servers. It can be created as a regular non-privileged user or as an administrative one that can use sudo to gain root privileges . Additionally enStratus copies user's public key to ~/.ssh/authorized_keys to allow secure passwordless authentication.
@@ -36,10 +36,10 @@ Linux/Unix サーバーにシステムユーザーを作成します。このユ
 
 ..
     OPTIONS
-    +++++++
+    ~~~~~~~
 
 オプション
-++++++++++
+~~~~~~~~~~
 
 CUST_ID
     ..
@@ -73,10 +73,10 @@ ADMINISTRATOR
 
 ..
     INVOCATION
-    ++++++++++
+    ~~~~~~~~~~
 
 起動
-++++
+~~~~
 
 ..
     This script is called when a user is added manually to a running server using the Shell Access control in the Servers list.
@@ -85,10 +85,10 @@ ADMINISTRATOR
 
 ..
     DEPENDENCIES
-    ++++++++++++
+    ~~~~~~~~~~~~
 
 依存関係
-++++++++
+~~~~~~~~
 
 ..
     * openssl for automatically generating a strong password.
@@ -99,10 +99,10 @@ ADMINISTRATOR
 
 ..
     PERMISSIONS
-    +++++++++++
+    ~~~~~~~~~~~
 
 権限
-++++
+~~~~
 
 ..
     It is launched by the enStratus user. It needs sudo authority for creating the user.
@@ -111,10 +111,10 @@ enstratus ユーザーが実行します。ユーザーを作成するために 
 
 ..
     OVERRIDES
-    +++++++++
+    ~~~~~~~~~
 
 オーバーライド
-++++++++++++++
+~~~~~~~~~~~~~~
 
 ..
     Override: Yes, pre and post

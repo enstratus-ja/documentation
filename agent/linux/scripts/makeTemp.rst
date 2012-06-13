@@ -1,12 +1,12 @@
 makeTemp
-~~~~~~~~
+--------
 
 ..
     Name
-    ++++
+    ~~~~
 
 名称
-++++
+~~~~
 
 ..
     makeTemp -  Shell script to setup the enStratus temp directory
@@ -15,19 +15,19 @@ makeTemp - enStratus の一時ディレクトリを設定するシェルスク�
 
 ..
     Synopsis
-    ++++++++
+    ~~~~~~~~
 
 構文
-++++
+~~~~
 
 makeTemp
 
 ..
     Description
-    +++++++++++
+    ~~~~~~~~~~~
 
 説明
-++++
+~~~~
 
 ..
     It creates /mnt/tmp folder and gives ownership to the enstratus user and group, preventing access to other users
@@ -36,10 +36,10 @@ makeTemp
 
 ..
     Options
-    +++++++
+    ~~~~~~~
 
 オプション
-++++++++++
+~~~~~~~~~~
 
 ..
     None
@@ -48,10 +48,10 @@ makeTemp
 
 ..
     Examples
-    ++++++++
+    ~~~~~~~~
 
 例
-++
+~~
 
 .. code-block:: sh
 
@@ -59,26 +59,26 @@ makeTemp
 	
 ..
     Invocation
-    ++++++++++
+    ~~~~~~~~~~
 
 起動
-++++
+~~~~
 
 ..
     Dependencies
-    ++++++++++++
+    ~~~~~~~~~~~~
 
 依存関係
-++++++++
+~~~~~~~~
 
 * sudo
 
 ..
     Permission
-    ++++++++++
+    ~~~~~~~~~~
 
 権限
-++++
+~~~~
 
 ..
     Run by the enstratus user. It needs sudo to create the temp folder and assign the correct ownership and permission.
@@ -87,10 +87,10 @@ enstratus ユーザーが実行します。一時フォルダーを作成して�
 
 ..
     Overrides
-    +++++++++
+    ~~~~~~~~~
 
 オーバーライド
-++++++++++++++
+~~~~~~~~~~~~~~
 
 ..
     Override: No

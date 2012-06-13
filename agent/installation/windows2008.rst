@@ -406,7 +406,7 @@ MS C ランタイムライブラリをダウンロードします:
 6. enStratus エージェントを解凍します
 
    ..
-       Right-click on enstratus-agent-windows-64bit-latest.zip  and select "Extract All".
+       Right-click on enstratus-agent-windows-64bit-latest.zip and select "Extract All".
 
    enstratus-agent-windows-64bit-latest.zip を右クリックして "Extract All" を選択します
 

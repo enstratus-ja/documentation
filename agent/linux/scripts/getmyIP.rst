@@ -1,12 +1,12 @@
 getmyIP
-~~~~~~~
+-------
 
 ..
     Function
-    ++++++++
+    ~~~~~~~~
 
 機能
-++++
+~~~~
 
 ..
     It retrieves the external (public) IP of the server using the third party service whatismyip.com
@@ -15,19 +15,19 @@ getmyIP
 
 ..
     Usage
-    +++++
+    ~~~~~
 
 使用法
-++++++
+~~~~~~
 
 getmyIP
 
 ..
     Invocation
-    ++++++++++
+    ~~~~~~~~~~
 
 起動
-++++
+~~~~
 
 ..
     It can be used by service configuration scripts when it is not possible to obtain the public IP address using other methods.
@@ -36,31 +36,31 @@ getmyIP
 
 ..
     Dependencies
-    ++++++++++++
+    ~~~~~~~~~~~~
 
 依存関係
-++++++++
+~~~~~~~~
 
 * wget
 
 ..
     Permissions
-    +++++++++++
+    ~~~~~~~~~~~
 
 権限
-++++
+~~~~
 
 ..
-    It is launched by the enstratus user.
+    It is called by the enstratus user.
 
 enstratus ユーザーが実行します。
 
 ..
     Overrides
-    +++++++++
+    ~~~~~~~~~
 
 オーバーライド
-++++++++++++++
+~~~~~~~~~~~~~~
 
 ..
     Override: No

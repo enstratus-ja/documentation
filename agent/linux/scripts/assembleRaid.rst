@@ -1,12 +1,12 @@
 assembleRaid
-~~~~~~~~~~~~
+------------
 
 ..
     NAME
-    ++++
+    ~~~~
 
 名称
-++++
+~~~~
 
 ..
     assembleRaid - Assembles RAID devices
@@ -15,19 +15,19 @@ assembleRaid - RAID デバイスを構築する
 
 ..
     Synopsis
-    ++++++++
+    ~~~~~~~~
 
 構文
-++++
+~~~~
 
 assembleRaid DEVICE_ID VOLUMES...
 
 ..
     Description
-    +++++++++++
+    ~~~~~~~~~~~
 
 説明
-++++
+~~~~
 
 ..
     It assembles a RAID device from a list of storage devices. Currently only RAID 0 (striped) volumes are supported 
@@ -36,10 +36,10 @@ assembleRaid DEVICE_ID VOLUMES...
 
 ..
     Options
-    +++++++
+    ~~~~~~~
 
 オプション
-++++++++++
+~~~~~~~~~~
 
 DEVICE_ID
     ..
@@ -55,20 +55,20 @@ VOLUMES
 
 ..
     Examples
-    ++++++++
+    ~~~~~~~~
 
 例
-++
+~~
 
 /enstratus/bin/assembleRaid md0 sdh sdi sdj
 	Creates the RAID 0 device /dev/md0 from volumes /dev/sdh, /dev/shi and /dev/sdj
 
 ..
     Invocation
-    ++++++++++
+    ~~~~~~~~~~
 
 起動
-++++
+~~~~
 
 ..
     This script is called when:
@@ -82,10 +82,10 @@ VOLUMES
 
 ..
     Dependencies
-    ++++++++++++
+    ~~~~~~~~~~~~
 
 依存関係
-++++++++
+~~~~~~~~
 
 * sudo
 * mdadm
@@ -93,10 +93,10 @@ VOLUMES
 
 ..
     Permission
-    +++++++++++
+    ~~~~~~~~~~
 
 権限
-++++
+~~~~
 
 ..
     It is launched by the enstratus user. It needs sudo authority for creating the array
@@ -105,10 +105,10 @@ enstratus ユーザーが実行します。アレイを作成するために sud
 
 ..
     Overrides
-    +++++++++
+    ~~~~~~~~~
 
 オーバーライド
-++++++++++++++
+~~~~~~~~~~~~~~
 
 ..
     Override: Yes, pre and post

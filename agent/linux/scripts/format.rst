@@ -1,12 +1,12 @@
 format
-~~~~~~
+------
 
 ..
     Function
-    ++++++++
+    ~~~~~~~~
 
 機能
-++++
+~~~~
 
 ..
     It creates a filesystem in a given physical or logical storage volume. Additionally it adds an entry for that volume in /etc/fstab so the volume can be mounted easily. Actual volume mount is performed by the mount script.
@@ -15,10 +15,10 @@ format
 
 ..
     Usage
-    +++++
+    ~~~~~
 
 使用法
-++++++
+~~~~~~
 
 format DEVICE_ID FILE_SYSTEM MOUNT_POINT ENCRYPTED
 
@@ -49,10 +49,10 @@ ENCRYPTED
 
 ..
     Invocation
-    ++++++++++
+    ~~~~~~~~~~
 
 起動
-++++
+~~~~
 
 ..
     This script is called when:
@@ -68,10 +68,10 @@ ENCRYPTED
 
 ..
     Dependencies
-    ++++++++++++
+    ~~~~~~~~~~~~
 
 依存関係
-++++++++
+~~~~~~~~
 
 * sudo
 * mkfs utility for the selected filesystem, that's is mkfs.xfs for XFS support, mkfs.ext3 for ext3
@@ -79,22 +79,22 @@ ENCRYPTED
 
 ..
     Permission
-    ++++++++++
+    ~~~~~~~~~~
 
 権限
-++++
+~~~~
 
 ..
-    It is launched by the enstratus user. It needs sudo authority for creating a filesystem and editing the /etc/fstab file.
+    It is called by the enstratus user. It needs sudo authority for creating a filesystem and editing the /etc/fstab file.
 
 enstratus ユーザーが実行します。ファイルシステムを作成して、/etc/fstab ファイルを編集するために sudo 権限が必要です。
 
 ..
     Overrides
-    +++++++++
+    ~~~~~~~~~
 
 オーバーライド
-++++++++++++++
+~~~~~~~~~~~~~~
 
 ..
     Override: Yes, pre and post

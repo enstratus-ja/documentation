@@ -1,12 +1,12 @@
 umount
-~~~~~~
+------
 
 ..
     Name
-    ++++
+    ~~~~
 
 名称
-++++
+~~~~
 
 ..
     umount - It umounts any filesystem mounted at a given folder 
@@ -15,19 +15,19 @@ umount - 所定のフォルダーにマウントされたファイルシステ�
 
 ..
     Synopsis
-    ++++++++
+    ~~~~~~~~
 
 構文
-++++
+~~~~
 
 umount MOUNT_POINT
 
 ..
     Description
-    +++++++++++
+    ~~~~~~~~~~~
 
 説明
-++++
+~~~~
 
 ..
     It umount any filesystem mounted at MOUNT_POINT . Aditionally it removes any related entry in /etc/fstab.
@@ -36,10 +36,10 @@ MOUNT_POINT の任意のファイルシステムをアンマウントします�
 
 ..
     Options
-    +++++++
+    ~~~~~~~
 
 オプション
-++++++++++
+~~~~~~~~~~
 
 MOUNT_POINT
     ..
@@ -49,10 +49,10 @@ MOUNT_POINT
 
 ..
     Invocation
-    ++++++++++
+    ~~~~~~~~~~
 
 起動
-++++
+~~~~
 
 ..
     This script is called when:
@@ -66,19 +66,19 @@ MOUNT_POINT
 
 ..
     Dependencies
-    ++++++++++++
+    ~~~~~~~~~~~~
 
 依存関係
-++++++++
+~~~~~~~~
 
 * sudo
 
 ..
     Permissions
-    +++++++++++
+    ~~~~~~~~~~~
 
 権限
-++++
+~~~~
 
 ..
     It is launched by the enstratus user. It needs sudo authority for umounting a device. 
@@ -87,10 +87,10 @@ enstratus ユーザーが実行します。デバイスをアンマウントす�
 
 ..
     Overrides
-    +++++++++
+    ~~~~~~~~~
 
 オーバーライド
-++++++++++++++
+~~~~~~~~~~~~~~
 
 ..
     Override: Yes, pre and post
