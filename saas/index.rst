@@ -22,25 +22,30 @@ enStratus のドキュメントポータルへようこそ。ドキュメント�
     customizing, and administering enStratus cloud governance software as part of an
     on-premise solution.
 
-`オンプレミス <http://on-premise.enstratus.com>`_: enStratus クラウド管理ソフトウェアを、オンプレミス環境で使うときのインストール、設定、カスタマイズ、管理機能のドキュメントです。
+`オンプレミス`_: enStratus クラウド管理ソフトウェアを、オンプレミス環境で使うときのインストール、設定、カスタマイズ、管理機能のドキュメントです。
 
 ..
     `SaaS <http://docs.enstratus.com>`_ : enStratus SaaS operators manual. Information
     on how to use cloud.enstratus.com.
 
-`SaaS <http://docs.enstratus.com>`_: enStratus SaaS の操作マニュアルです。cloud.enstratus.com の使い方を説明します。
+`SaaS`_: enStratus SaaS の操作マニュアルです。cloud.enstratus.com の使い方を説明します。
 
 ..
     `Advanced Automation <http://automation.enstratus.com>`_ : Advanced automation topics. How
     to automate.
 
-`高度な自動化機能 <http://automation.enstratus.com>`_: 高度な自動化に関する内容です。
+`高度な自動化機能`_: 高度な自動化に関する内容です。
 
 ..
     `enStratus Agent <http://agent.enstratus.com>`_ : enStratus Agent information.
     Installation and operation.
 
-`enStratus エージェント <http://agent.enstratus.com>`_: enStratus エージェントのインストールとその操作のドキュメントです。
+`enStratus エージェント`_: enStratus エージェントのインストールとその操作のドキュメントです。
+
+..
+    オリジナルにはリンクがないけれど追加
+
+`チュートリアル`_: 実際に Wordpress を使って enStratus の自動化機能を習得します。
 
 ..
     New Content
@@ -52,12 +57,12 @@ enStratus のドキュメントポータルへようこそ。ドキュメント�
 ..
     `Notifications <http://docs.enstratus.com/console/notifications.html>`_
 
-`通知機能 <http://docs.enstratus.com/console/notifications.html>`_
+`通知機能`_
 
 ..
     `Identify and Access Management <http://docs.enstratus.com/users/iam.html>`_
 
-`識別とアクセス管理 <http://docs.enstratus.com/users/iam.html>`_
+`識別とアクセス管理`_
 
 .. toctree::
    :maxdepth: 2
@@ -72,3 +77,5 @@ enStratus のドキュメントポータルへようこそ。ドキュメント�
    budget/budget
    agent/agent
    api/api
+
+.. include:: links.inc
