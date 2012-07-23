@@ -1,6 +1,6 @@
 
 .. _On-Premise: http://on-premise.enstratus.com
-.. _オンプレミス: http://enstratus.creationline.com/tutorials/
+.. _オンプレミス: http://enstratus.creationline.com/on-premise/
 .. _SaaS (en): http://docs.enstratus.com
 .. _SaaS: http://enstratus.creationline.com/saas/
 .. _Advanced Automation: http://automation.enstratus.com
